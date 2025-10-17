@@ -1,0 +1,352 @@
+{
+    "220": {
+        "id": "220",
+        "title": "0x09. C - Static libraries",
+        "quiz": [
+            {
+                "question": "<p>\n  What command is used to create a static library from object files?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": true,
+                        "text": " <p> ar </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> gcc </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> nm </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> ld </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> ranlib </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is the format of a static library?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> An executable ELF file </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> A relocatable ELF file </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> A shared ELF file </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> An archive </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What command(s) can be used to list the symbols stored in a static library?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> ranlib </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> nm </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> ar </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> ld </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is the point of using\n  <code>\n   ranlib\n  </code>\n  ?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": true,
+                        "text": " <p> Indexing an archive </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Creating an archive </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Create a library from a simple archive </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> List the content of a library </p> "
+                    }
+                ]
+            }
+        ],
+        "concepts": [
+            {
+                "id": "61",
+                "title": "C static libraries"
+            }
+        ],
+        "desc": "<div class=\"panel-body\">\n <h2>\n  Resources\n </h2>\n <p>\n  <strong>\n   Read or watch\n  </strong>\n  :\n </p>\n <ul>\n  <li>\n   <a href=\"https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html\" target=\"_blank\" title='What Is A \"C\" Library? What Is It Good For?'>\n    What Is A \u201cC\u201d Library? What Is It Good For?\n   </a>\n  </li>\n  <li>\n   <a href=\"https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html\" target=\"_blank\" title='Creating A Static \"C\" Library Using \"ar\" and \"ranlib\"'>\n    Creating A Static \u201cC\u201d Library Using \u201car\u201d and \u201cranlib\u201d\n   </a>\n  </li>\n  <li>\n   <a href=\"https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html\" target=\"_blank\" title='Using A \"C\" Library In A Program'>\n    Using A \u201cC\u201d Library In A Program\n   </a>\n  </li>\n  <li>\n   <a href=\"https://www.youtube.com/watch?v=eW5he5uFBNM\" target=\"_blank\" title=\"What is difference between Dynamic and Static library(Static and Dynamic linking)\">\n    What is difference between Dynamic and Static library(Static and Dynamic linking)\n   </a>\n   (\n   <em>\n    stop at 4:44\n   </em>\n   )\n  </li>\n </ul>\n <p>\n  <strong>\n   man or help\n  </strong>\n  :\n </p>\n <ul>\n  <li>\n   <code>\n    ar\n   </code>\n  </li>\n  <li>\n   <code>\n    ranlib\n   </code>\n  </li>\n  <li>\n   <code>\n    nm\n   </code>\n  </li>\n </ul>\n <h2>\n  Additional Resource\n </h2>\n <ul>\n  <li>\n   <a href=\"https://www.youtube.com/watch?feature=shared&amp;v=icbR8V5eOQc\" target=\"_blank\" title=\"Static Libraries: How to Create &amp; Use them in C programming\">\n    Static Libraries: How to Create &amp; Use them in C programming\n   </a>\n  </li>\n </ul>\n <h2>\n  Learning Objectives\n </h2>\n <p>\n  At the end of this project, you are expected to be able to\n  <a href=\"https://fs.blog/feynman-learning-technique/\" target=\"_blank\" title=\"explain to anyone\">\n   explain to anyone\n  </a>\n  ,\n  <strong>\n   without the help of Google\n  </strong>\n  :\n </p>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   What is a static library, how does it work, how to create one, and how to use it\n  </li>\n  <li>\n   Basic usage of\n   <code>\n    ar\n   </code>\n   ,\n   <code>\n    ranlib\n   </code>\n   ,\n   <code>\n    nm\n   </code>\n  </li>\n </ul>\n <h3>\n  Copyright - Plagiarism\n </h3>\n <ul>\n  <li>\n   You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.\n  </li>\n  <li>\n   You will not be able to meet the objectives of this or any following project by copying and pasting someone else\u2019s work.\n  </li>\n  <li>\n   You are not allowed to publish any content of this project.\n  </li>\n  <li>\n   Any form of plagiarism is strictly forbidden and will result in removal from the program.\n  </li>\n </ul>\n <h2>\n  Requirements\n </h2>\n <h3>\n  C\n </h3>\n <ul>\n  <li>\n   Allowed editors:\n   <code>\n    vi\n   </code>\n   ,\n   <code>\n    vim\n   </code>\n   ,\n   <code>\n    emacs\n   </code>\n  </li>\n  <li>\n   All your files will be compiled on Ubuntu 20.04 LTS using\n   <code>\n    gcc\n   </code>\n   , using the options\n   <code>\n    -Wall -Werror -Wextra -pedantic -std=gnu89\n   </code>\n  </li>\n  <li>\n   All your files should end with a new line\n  </li>\n  <li>\n   A\n   <code>\n    README.md\n   </code>\n   file, at the root of the folder of the project is mandatory\n  </li>\n  <li>\n   Your code should use the\n   <code>\n    Betty\n   </code>\n   style. It will be checked using\n   <a href=\"https://github.com/alx-tools/Betty/blob/master/betty-style.pl\" target=\"_blank\" title=\"betty-style.pl\">\n    betty-style.pl\n   </a>\n   and\n   <a href=\"https://github.com/alx-tools/Betty/blob/master/betty-doc.pl\" target=\"_blank\" title=\"betty-doc.pl\">\n    betty-doc.pl\n   </a>\n  </li>\n  <li>\n   You are not allowed to use global variables\n  </li>\n  <li>\n   No more than 5 functions per file\n  </li>\n  <li>\n   You are not allowed to use the standard library. Any use of functions like\n   <code>\n    printf\n   </code>\n   ,\n   <code>\n    puts\n   </code>\n   , etc\u2026 is forbidden\n  </li>\n  <li>\n   You are allowed to use\n   <a href=\"https://github.com/alx-tools/_putchar.c/blob/master/_putchar.c\" target=\"_blank\" title=\"_putchar\">\n    _putchar\n   </a>\n  </li>\n  <li>\n   You don\u2019t have to push\n   <code>\n    _putchar.c\n   </code>\n   , we will use our file. If you do it won\u2019t be taken into account\n  </li>\n  <li>\n   In the following examples, the\n   <code>\n    main.c\n   </code>\n   files are shown as examples. You can use them to test your functions, but you don\u2019t have to push them to your repo (if you do we won\u2019t take them into account). We will use our own\n   <code>\n    main.c\n   </code>\n   files at compilation. Our\n   <code>\n    main.c\n   </code>\n   files might be different from the one shown in the examples\n  </li>\n  <li>\n   The prototypes of all your functions and the prototype of the function\n   <code>\n    _putchar\n   </code>\n   should be included in your header file called\n   <code>\n    main.h\n   </code>\n  </li>\n  <li>\n   Don\u2019t forget to push your header file\n  </li>\n </ul>\n <h3>\n  Bash\n </h3>\n <ul>\n  <li>\n   Allowed editors:\n   <code>\n    vi\n   </code>\n   ,\n   <code>\n    vim\n   </code>\n   ,\n   <code>\n    emacs\n   </code>\n  </li>\n  <li>\n   All your scripts will be tested on Ubuntu 20.04 LTS\n  </li>\n  <li>\n   All your files should end with a new line (\n   <a href=\"http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789\">\n    why?\n   </a>\n   )\n  </li>\n  <li>\n   The first line of all your files should be exactly\n   <code>\n    #!/bin/bash\n   </code>\n  </li>\n  <li>\n   A\n   <code>\n    README.md\n   </code>\n   file, at the root of the folder of the project, describing what each script is doing\n  </li>\n  <li>\n   All your files must be executable\n  </li>\n </ul>\n <h2>\n  More Info\n </h2>\n <p>\n  You do not need to learn about dynamic libraries, yet.\n </p>\n</div>\n",
+        "tasks": [
+            {
+                "task_id": "923",
+                "title": "0. A library is not a luxury but one of the necessities of life",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Create the static library\n  <code>\n   libmy.a\n  </code>\n  containing all the functions listed below:\n </p>\n <pre><code>int _putchar(char c);\nint _islower(int c);\nint _isalpha(int c);\nint _abs(int n);\nint _isupper(int c);\nint _isdigit(int c);\nint _strlen(char *s);\nvoid _puts(char *s);\nchar *_strcpy(char *dest, char *src);\nint _atoi(char *s);\nchar *_strcat(char *dest, char *src);\nchar *_strncat(char *dest, char *src, int n);\nchar *_strncpy(char *dest, char *src, int n);\nint _strcmp(char *s1, char *s2);\nchar *_memset(char *s, char b, unsigned int n);\nchar *_memcpy(char *dest, char *src, unsigned int n);\nchar *_strchr(char *s, char c);\nunsigned int _strspn(char *s, char *accept);\nchar *_strpbrk(char *s, char *accept);\nchar *_strstr(char *haystack, char *needle);\n</code></pre>\n <p>\n  If you haven\u2019t coded all of the above functions create empty ones with the right prototype.\n  <br/>\n  Don\u2019t forget to push your\n  <code>\n   main.h\n  </code>\n  file to your repository. It should at least contain all the prototypes of the above functions.\n </p>\n <pre><code>julien@ubuntu:~/0x09. Static Librairies$ ar -t libmy.a \n0-isupper.o\n0-memset.o\n0-strcat.o\n1-isdigit.o\n1-memcpy.o\n1-strncat.o\n100-atoi.o\n2-strchr.o\n2-strlen.o\n2-strncpy.o\n3-islower.o\n3-puts.o\n3-strcmp.o\n3-strspn.o\n4-isalpha.o\n4-strpbrk.o\n5-strstr.o\n6-abs.o\n9-strcpy.o\n_putchar.o\njulien@ubuntu:~/0x09. Static Librairies$ nm libmy.a \n\n0-isupper.o:\n0000000000000000 T _isupper\n\n0-memset.o:\n0000000000000000 T _memset\n\n0-strcat.o:\n0000000000000000 T _strcat\n\n1-isdigit.o:\n0000000000000000 T _isdigit\n\n1-memcpy.o:\n0000000000000000 T _memcpy\n\n1-strncat.o:\n0000000000000000 T _strncat\n\n100-atoi.o:\n0000000000000000 T _atoi\n\n2-strchr.o:\n0000000000000000 T _strchr\n\n2-strlen.o:\n0000000000000000 T _strlen\n\n2-strncpy.o:\n0000000000000000 T _strncpy\n\n3-islower.o:\n0000000000000000 T _islower\n\n3-puts.o:\n                 U _putchar\n0000000000000000 T _puts\n\n3-strcmp.o:\n0000000000000000 T _strcmp\n\n3-strspn.o:\n0000000000000000 T _strspn\n\n4-isalpha.o:\n0000000000000000 T _isalpha\n\n4-strpbrk.o:\n0000000000000000 T _strpbrk\n\n5-strstr.o:\n0000000000000000 T _strstr\n\n6-abs.o:\n0000000000000000 T _abs\n\n9-strcpy.o:\n0000000000000000 T _strcpy\n\n_putchar.o:\n0000000000000000 T _putchar\n                 U write\njulien@ubuntu:~/0x09. Static Librairies$ cat main.c \n#include \"main.h\"\n\nint main(void)\n{\n    _puts(\"\\\"At the end of the day, my goal was to be the best hacker\\\"\\n\\t- Kevin Mitnick\");\n    return (0);\n}\njulien@ubuntu:~/0x09. Static Librairies$ gcc -std=gnu89 main.c -L. -lmy -o quote\njulien@ubuntu:~/0x09. Static Librairies$ ./quote \n\"At the end of the day, my goal was to be the best hacker\"\n    - Kevin Mitnick\njulien@ubuntu:~/0x09. Static Librairies$ \n</code></pre>\n</div>",
+                "file_info": {
+                    "repo": "alx-low_level_programming",
+                    "directory": "0x09-static_libraries",
+                    "file": "libmy.a, main.h"
+                },
+                "checks": [
+                    {
+                        "title": "<p>Files are present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>README.md exists and is not empty</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 2,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Compile library</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": [
+                            {
+                                "name": "main.c",
+                                "url": "projects/220/files/923_main.c"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Check for <code>_putchar</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_islower</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_isalpha</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_abs</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_isupper</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_isdigit</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 15,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strlen</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 16,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_puts</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 17,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strcpy</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 18,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_atoi</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 19,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strcat</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 20,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strncat</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 21,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strncpy</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 22,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strcmp</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 23,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_memset</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 24,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_memcpy</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 25,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strchr</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 26,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strspn</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 27,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strpbrk</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 28,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Check for <code>_strstr</code> function</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 29,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Betty style code</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 30,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "925",
+                "title": "1. Without libraries what have we? We have no past and no future",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Create a script called\n  <code>\n   create_static_lib.sh\n  </code>\n  that creates a static library called\n  <code>\n   liball.a\n  </code>\n  from all the\n  <code>\n   .c\n  </code>\n  files that are in the current directory.\n </p>\n <pre><code>julien@ubuntu:~/0x09. Static Librairies$ ls *.c\n0-isupper.c  0-strcat.c  1-isdigit.c  1-strncat.c  2-strlen.c   3-islower.c  3-strcmp.c  4-isalpha.c  5-strstr.c  9-strcpy.c  _putchar.c\n0-memset.c   100-atoi.c  1-memcpy.c   2-strchr.c   2-strncpy.c  3-puts.c     3-strspn.c  4-strpbrk.c  6-abs.c\njulien@ubuntu:~/0x09. Static Librairies$ ./create_static_lib.sh \njulien@ubuntu:~/0x09. Static Librairies$ ls *.a\nliball.a\njulien@ubuntu:~/0x09. Static Librairies$ ar -t liball.a\n0-isupper.o\n0-memset.o\n0-strcat.o\n100-atoi.o\n1-isdigit.o\n1-memcpy.o\n1-strncat.o\n2-strchr.o\n2-strlen.o\n2-strncpy.o\n3-islower.o\n3-puts.o\n3-strcmp.o\n3-strspn.o\n4-isalpha.o\n4-strpbrk.o\n5-strstr.o\n6-abs.o\n9-strcpy.o\n_putchar.o\njulien@ubuntu:~/0x09. Static Librairies$ \n</code></pre>\n</div>",
+                "file_info": {
+                    "repo": "alx-low_level_programming",
+                    "directory": "0x09-static_libraries",
+                    "file": "create_static_lib.sh"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Script runs without error</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 2,
+                        "files": [
+                            {
+                                "name": "source_0.c",
+                                "url": "projects/220/files/925_source_0.c"
+                            },
+                            {
+                                "name": "source_1.c",
+                                "url": "projects/220/files/925_source_1.c"
+                            },
+                            {
+                                "name": "source_2.c",
+                                "url": "projects/220/files/925_source_2.c"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>First line is <code>#!/bin/bash</code></p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p><code>liball.a</code> was created</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p><code>liball.a</code> contains all the sources in the current directory</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    }
+                ]
+            }
+        ]
+    }
+}

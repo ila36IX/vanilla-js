@@ -2,14 +2,20 @@ import data from './services/data.js';
 import api from './services/api.js';
 import Route from './services/router.js';
 
+// not used, but it needs to be imported
+import UsersPage from './components/UsersPage.js'
+import ProjectsPage from './components/ProjectsPage.js';
+import ProjectPage from './components/ProjectPage.js';
+
 window.addEventListener('DOMContentLoaded', main);
 
 async function loadData() {
-  app.data.user = await api.getUser();
+  app.data.users = null;
+  app.data.users = await api.getUser();
+  app.data.projects = await api.getProjects();
 }
-  
-function main()
-{
+
+async function main() {
   // set up the global data state and init it
   window.app = {};
   app.data = data;

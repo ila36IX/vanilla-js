@@ -6,15 +6,17 @@
  *  - on: event:handler eg. {'click': () => alert("clicked")}
  *  - childern: array of Node types, the same type that this function returns
  */
-export default function DOMBuilder(tag, text, options={})
+export default function DOMBuilder(tag, text="", options={})
 {
   const el = document.createElement(tag);  
 
   if (typeof text == 'string')
     el.textContent = text;
+  else
+    console.error("DOMBuilder text must be string. Got: ", options.attr);
 
-  if (options.attrs) {
-    for (const [key, value] of Object.entries(options.attrs)) {
+  if (options.attr) {
+    for (const [key, value] of Object.entries(options.attr)) {
       if (typeof value == 'string')
         el.setAttribute(key, value);
     }

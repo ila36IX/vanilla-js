@@ -1,9 +1,22 @@
 import api from "./api.js";
 
 const data = {
-  user: null,
+  users: null,
   menu: null,
   cart: []
 }
 
-export default data;
+const proxiedData = new Proxy(data, {
+  set(target, property, value) {
+    target[property] = value;
+
+    switch (property) {
+      case 'users': window.dispatchEvent(new Event("appuserschange")); break;
+      case 'projects': window.dispatchEvent(new Event("_ProjectsIndexChange")); break;
+      default: break;
+    }
+    return (true);
+  }
+});
+
+export default proxiedData;

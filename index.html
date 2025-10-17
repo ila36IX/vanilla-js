@@ -1,25 +1,62 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script defer type="module" src="/src/main.js"></script>
-    <style>
-      #app {
-        margin-top: 2rem;
-        padding: 1rem;
-        border: 1px solid black;
-      }
-    </style>
     <title>SimpleUI</title>
   </head>
-  <body>
-    <div>
-      <a href="/users">users</a>
-      <a href="/projects">projects</a>
-      <a href="/concepts">concepts</a>
-      <main id="app" ></main>
+  <body class="bg-dark text-light fs-5">
+    <nav class="navbar navbar-expand-sm bg-black " data-bs-theme="dark">
+      <div class="container-sm">
+        <a class="navbar-brand fs-3" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/users">users</a>
+            <a class="nav-link" href="/concepts">Concepts</a>
+            <a class="nav-link" href="/projects">Projects</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container text-light mt-4" >
     </div>
+    <main class="container text-light mt-4" id="root">
+    </main>
+
+    <template id="projects-index-template">
+      <div>
+        <a>testing</a>
+      </div>
+    </template>
+
+    <template id="quiz-template">
+      <div id="#question"></div>
+      <div id="#choices"></div>
+    </template>
+
+    <!-- users table -->
+    <template id="users-table-template">
+      <h1 class="mb-4">Users page</h1>
+      <table class="table table-dark table-bordered border-primary">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </template>
+
   </body>
 </html>
