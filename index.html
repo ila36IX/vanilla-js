@@ -8,6 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script defer type="module" src="/src/main.js"></script>
+    <style>
+      pre {
+        background-color: #333;
+        padding: 2rem;
+        border-radius: 9px;
+        border: 1px solid #777;
+      }
+    </style>
     <title>SimpleUI</title>
   </head>
   <body class="bg-dark text-light fs-5">
@@ -31,6 +39,62 @@
     </div>
     <main class="container text-light mt-4" id="root">
     </main>
+
+    <section class="container">
+
+      <!-- Navigate between answers -->
+      <header class="Quiz">
+        <button>Click</button>
+        <div>
+          <span>XX</span>
+          <span>/</span>
+          <span>YY</span>
+        </div>
+      </header>
+
+      <!-- Main question component -->
+      <form>
+        <!-- Quiz part -->
+        <div class="d-none">
+          <div>Question</div>
+
+          <!-- Answers -->
+          <ul>
+            <li>
+              <input type="radio" name="" value="2">
+              <label for="id">Anwser</label>  
+            </li>
+            <li>
+              <input type="radio" name="" value="1">
+              <label for="id">Anwser</label>  
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div>Question</div>
+
+          <!-- Answers -->
+          <ul>
+            <li>
+              <input type="radio" name="" value="2">
+              <label for="id">Anwser</label>  
+            </li>
+            <li>
+              <input type="radio" name="" value="1">
+              <label for="id">Anwser</label>  
+            </li>
+          </ul>
+        </div>
+
+        <!-- Submit part... -->
+        <div>
+          <button>Next</button>
+          <button>prev</button>
+          <button>submit</button>
+        </div>
+      </form>
+    </section>
 
     <template id="projects-index-template">
       <div>

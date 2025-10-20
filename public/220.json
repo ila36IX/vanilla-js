@@ -348,5 +348,1625 @@
                 ]
             }
         ]
+    },
+    "250": {
+        "id": "250",
+        "title": "0x08. Python - More Classes and Objects",
+        "quiz": [
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nu = User()\nprint(u.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": true,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nUser.id = 98\nu = User()\nprint(u.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nu = User()\nu.id = 89\nUser.id = 98\nprint(u.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nUser.id = 98\nu = User()\nu.id = 89\nprint(User.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is\n  <code>\n   __init__\n  </code>\n  ?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> A class method </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> A class attribute </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> The instance method called when a new object is created </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> The instance method called when a class is called for the first time </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nu = User()\nu.id = 89\nprint(u.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is\n  <code>\n   __del__\n  </code>\n  ?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> Instance method that prints the memory address of an instance </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Instance method that removes the last character of an instance </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> Instance method called when an instance is deleted </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nprint(User.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": true,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nUser.id = 98\nu = User()\nu.id = 89\nprint(u.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is\n  <code>\n   __doc__\n  </code>\n  ?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> Prints the documentation of an object </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> The string documentation of an object (based on docstring) </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Creates man file </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is\n  <code>\n   __repr__\n  </code>\n  ?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": true,
+                        "text": " <p> Instance method that returns an \u201cofficial\u201d string representation of an instance </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Instance method that prints an \u201cofficial\u201d string representation of an instance </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Instance method that returns the dictionary representation of an instance </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What is\n  <code>\n   __str__\n  </code>\n  ?\n </p>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> Instance method that returns the dictionary representation of an instance </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> Instance method that returns an \u201cinformal\u201d and nicely printable string representation of an instance </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> Instance method that prints an \u201cinformal\u201d and nicely printable string representation of an instance </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nu = User()\nu.id = 89\nUser.id = 98\nprint(User.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            },
+            {
+                "question": "<p>\n  What do these lines print?\n </p>\n <pre><code>class User:\n    id = 1\n\nu = User()\nUser.id = 98\nprint(u.id)\n</code></pre>",
+                "choices": [
+                    {
+                        "is_correct": false,
+                        "text": " <p> 1 </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> None </p> "
+                    },
+                    {
+                        "is_correct": false,
+                        "text": " <p> 89 </p> "
+                    },
+                    {
+                        "is_correct": true,
+                        "text": " <p> 98 </p> "
+                    }
+                ]
+            }
+        ],
+        "concepts": null,
+        "desc": "<div class=\"panel-body\">\n <h2>\n  Resources\n </h2>\n <p>\n  <strong>\n   Read or watch\n  </strong>\n  :\n </p>\n <ul>\n  <li>\n   <a href=\"https://python.swaroopch.com/oop.html\" target=\"_blank\" title=\"Object Oriented Programming\">\n    Object Oriented Programming\n   </a>\n   (\n   <em>\n    Read everything until the paragraph \u201cInheritance\u201d (excluded)\n   </em>\n   )\n  </li>\n  <li>\n   <a href=\"https://python-course.eu/oop/object-oriented-programming.php\" target=\"_blank\" title=\"Object-Oriented Programming\">\n    Object-Oriented Programming\n   </a>\n   (\n   <em>\n    Please be careful: in most of the following paragraphs, the author shows the way you should not use or write a class, in order to help you better understand some concepts and how everything works in Python 3. Make sure you read only the following paragraphs: \u201cGeneral Introduction,\u201d \u201cFirst-class Everything,\u201d \u201cA Minimal Class in Python,\u201d \u201cAttributes,\u201d \u201cMethods,\u201d \u201cThe\n    <code>\n     __init__\n    </code>\n    Method,\u201d  \u201cData Abstraction, Data Encapsulation, and Information Hiding,\u201d \u201c\n    <code>\n     __str__\n    </code>\n    - and\n    <code>\n     __repr__\n    </code>\n    -Methods,\u201d \u201cPublic- Protected- and Private Attributes,\u201d &amp; \u201cDestructor\u201d\n   </em>\n   )\n  </li>\n  <li>\n   <a href=\"https://python-course.eu/oop/class-instance-attributes.php\" target=\"_blank\" title=\"Class and Instance Attributes\">\n    Class and Instance Attributes\n   </a>\n  </li>\n  <li>\n   <a href=\"https://www.youtube.com/watch?v=rq8cL2XMM5M\" target=\"_blank\" title=\"classmethods and staticmethods\">\n    classmethods and staticmethods\n   </a>\n  </li>\n  <li>\n   <a href=\"https://python-course.eu/oop/properties-vs-getters-and-setters.php\" target=\"_blank\" title=\"Properties vs. Getters and Setters\">\n    Properties vs. Getters and Setters\n   </a>\n   (\n   <em>\n    Mainly the last part \u201cPublic instead of Private Attributes\u201d\n   </em>\n   )\n  </li>\n  <li>\n   <a href=\"https://shipit.dev/posts/python-str-vs-repr.html\" target=\"_blank\" title=\"str vs repr\">\n    str vs repr\n   </a>\n  </li>\n </ul>\n <h2>\n  Learning Objectives\n </h2>\n <p>\n  At the end of this project, you are expected to be able to\n  <a href=\"https://fs.blog/feynman-learning-technique/\" target=\"_blank\" title=\"explain to anyone\">\n   explain to anyone\n  </a>\n  ,\n  <strong>\n   without the help of Google\n  </strong>\n  :\n </p>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   Why Python programming is awesome\n  </li>\n  <li>\n   What is OOP\n  </li>\n  <li>\n   \u201cfirst-class everything\u201d\n  </li>\n  <li>\n   What is a class\n  </li>\n  <li>\n   What is an object and an instance\n  </li>\n  <li>\n   What is the difference between a class and an object or instance\n  </li>\n  <li>\n   What is an attribute\n  </li>\n  <li>\n   What are and how to use public, protected and private attributes\n  </li>\n  <li>\n   What is\n   <code>\n    self\n   </code>\n  </li>\n  <li>\n   What is a method\n  </li>\n  <li>\n   What is the special\n   <code>\n    __init__\n   </code>\n   method and how to use it\n  </li>\n  <li>\n   What is Data Abstraction, Data Encapsulation, and Information Hiding\n  </li>\n  <li>\n   What is a property\n  </li>\n  <li>\n   What is the difference between an attribute and a property in Python\n  </li>\n  <li>\n   What is the Pythonic way to write getters and setters in Python\n  </li>\n  <li>\n   What are the special\n   <code>\n    __str__\n   </code>\n   and\n   <code>\n    __repr__\n   </code>\n   methods and how to use them\n  </li>\n  <li>\n   What is the difference between\n   <code>\n    __str__\n   </code>\n   and\n   <code>\n    __repr__\n   </code>\n  </li>\n  <li>\n   What is a class attribute\n  </li>\n  <li>\n   What is the difference between a object attribute and a class attribute\n  </li>\n  <li>\n   What is a class method\n  </li>\n  <li>\n   What is a static method\n  </li>\n  <li>\n   How to dynamically create arbitrary new attributes for existing instances of a class\n  </li>\n  <li>\n   How to bind attributes to object and classes\n  </li>\n  <li>\n   What is and what does contain\n   <code>\n    __dict__\n   </code>\n   of a class and of an instance of a class\n  </li>\n  <li>\n   How does Python find the attributes of an object or class\n  </li>\n  <li>\n   How to use the\n   <code>\n    getattr\n   </code>\n   function\n  </li>\n </ul>\n <h3>\n  Copyright - Plagiarism\n </h3>\n <ul>\n  <li>\n   You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.\n  </li>\n  <li>\n   You will not be able to meet the objectives of this or any following project by copying and pasting someone else\u2019s work.\n  </li>\n  <li>\n   You are not allowed to publish any content of this project.\n  </li>\n  <li>\n   Any form of plagiarism is strictly forbidden and will result in removal from the program.\n  </li>\n </ul>\n <h2>\n  Requirements\n </h2>\n <h3>\n  General\n </h3>\n <ul>\n  <li>\n   Allowed editors:\n   <code>\n    vi\n   </code>\n   ,\n   <code>\n    vim\n   </code>\n   ,\n   <code>\n    emacs\n   </code>\n  </li>\n  <li>\n   All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)\n  </li>\n  <li>\n   All your files should end with a new line\n  </li>\n  <li>\n   The first line of all your files should be exactly\n   <code>\n    #!/usr/bin/python3\n   </code>\n  </li>\n  <li>\n   A\n   <code>\n    README.md\n   </code>\n   file, at the root of the folder of the project, is mandatory\n  </li>\n  <li>\n   Your code should use the pycodestyle (version\n   <code>\n    2.8.*\n   </code>\n   )\n  </li>\n  <li>\n   All your files must be executable\n  </li>\n  <li>\n   The length of your files will be tested using\n   <code>\n    wc\n   </code>\n  </li>\n </ul>\n</div>\n",
+        "tasks": [
+            {
+                "task_id": "1210",
+                "title": "0. Simple rectangle",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write an empty class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle:\n </p>\n <ul>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 0-main.py\n#!/usr/bin/python3\nRectangle = __import__('0-rectangle').Rectangle\n\nmy_rectangle = Rectangle()\nprint(type(my_rectangle))\nprint(my_rectangle.__dict__)\n\nguillaume@ubuntu:~/0x08$ ./0-main.py\n&lt;class '0-rectangle.Rectangle'&gt;\n{}\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "0-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>README.md exists and is not empty</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 2,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle()\nprint(type(my</em>rectangle))\nprint(my<em>rectangle.</em><em>dict</em>_)</p>\n",
+                        "points": 5.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1210_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1211",
+                "title": "1. Real definition of a rectangle",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   0-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 1-main.py\n#!/usr/bin/python3\nRectangle = __import__('1-rectangle').Rectangle\n\nmy_rectangle = Rectangle(2, 4)\nprint(my_rectangle.__dict__)\n\nmy_rectangle.width = 10\nmy_rectangle.height = 3\nprint(my_rectangle.__dict__)\n\nguillaume@ubuntu:~/0x08$ ./1-main.py\n{'_Rectangle__height': 4, '_Rectangle__width': 2}\n{'_Rectangle__height': 3, '_Rectangle__width': 10}\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "1-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \ntry:\n    my<em>rectangle = Rectangle(2, -3)\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n\n<p>try:\n    my<em>rectangle = Rectangle(-2, 3)\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_8.py",
+                                "url": "projects/250/files/1211_main_8.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \ntry:\n    my<em>rectangle = Rectangle(2, 3)\n    my</em>rectangle.width = -4\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.<strong>class</strong>.<strong>name</strong>, e))</p>\n\n<p>try:\n    my<em>rectangle = Rectangle(2, 3)\n    my</em>rectangle.width = &ldquo;4&rdquo;\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.<strong>class</strong>.<strong>name</strong>, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_9.py",
+                                "url": "projects/250/files/1211_main_9.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \ntry:\n    my<em>rectangle = Rectangle(2, 3)\n    my</em>rectangle.height = -4\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.<strong>class</strong>.<strong>name</strong>, e))</p>\n\n<p>try:\n    my<em>rectangle = Rectangle(2, 3)\n    my</em>rectangle.height = &ldquo;4&rdquo;\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.<strong>class</strong>.<strong>name</strong>, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_10.py",
+                                "url": "projects/250/files/1211_main_10.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(sorted(my</em>rectangle.<strong>dict</strong>))</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1211_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(my</em>rectangle.width)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 15,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1211_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(my</em>rectangle.height)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 16,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1211_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(4)\nprint(&ldquo;{} - {}&rdquo;.format(my</em>rectangle.width, my_rectangle.height))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 17,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1211_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle()\nprint(&ldquo;{} - {}&rdquo;.format(my</em>rectangle.width, my_rectangle.height))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 18,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1211_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:<br>\nmy<em>rectangle = Rectangle(2, 4)\nprint(&ldquo;{} - {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height))\nmy</em>rectangle.width = 10\nprint(&ldquo;{} - {}&rdquo;.format(my<em>rectangle.width, my</em>rectangle.height))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 19,
+                        "files": [
+                            {
+                                "name": "main_5.py",
+                                "url": "projects/250/files/1211_main_5.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(&ldquo;{} - {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height))\nmy</em>rectangle.height = 10\nprint(&ldquo;{} - {}&rdquo;.format(my<em>rectangle.width, my</em>rectangle.height))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 20,
+                        "files": [
+                            {
+                                "name": "main_6.py",
+                                "url": "projects/250/files/1211_main_6.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \ntry:\n    my<em>rectangle = Rectangle(2, &ldquo;3&rdquo;)\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n\n<p>try:\n    my<em>rectangle = Rectangle(&ldquo;2&rdquo;, 3)\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 21,
+                        "files": [
+                            {
+                                "name": "main_7.py",
+                                "url": "projects/250/files/1211_main_7.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 30,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1212",
+                "title": "2. Area and Perimeter",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   1-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter is equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 2-main.py\n#!/usr/bin/python3\nRectangle = __import__('2-rectangle').Rectangle\n\nmy_rectangle = Rectangle(2, 4)\nprint(\"Area: {} - Perimeter: {}\".format(my_rectangle.area(), my_rectangle.perimeter()))\n\nprint(\"--\")\n\nmy_rectangle.width = 10\nmy_rectangle.height = 3\nprint(\"Area: {} - Perimeter: {}\".format(my_rectangle.area(), my_rectangle.perimeter()))\n\nguillaume@ubuntu:~/0x08$ ./2-main.py\nArea: 8 - Perimeter: 12\n--\nArea: 30 - Perimeter: 26\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "2-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(&ldquo;{} - {} =&gt; {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height. my</em>rectangle.area()))</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1212_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(&ldquo;{} - {} =&gt; {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height. my</em>rectangle.perimeter()))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1212_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(10, 10)\nprint(&ldquo;{} - {} =&gt; {} / {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height. my</em>rectangle.area(), my_rectangle.perimeter()))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1212_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(10)\nprint(&ldquo;{} - {} =&gt; {} / {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height. my</em>rectangle.area(), my_rectangle.perimeter()))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1212_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle()\nprint(&ldquo;{} - {} =&gt; {} / {}&rdquo;.format(my</em>rectangle.width, my<em>rectangle.height. my</em>rectangle.area(), my_rectangle.perimeter()))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1212_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1213",
+                "title": "3. String representation",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   2-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character\n   <code>\n    #\n   </code>\n   : (see example below)\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 3-main.py\n#!/usr/bin/python3\nRectangle = __import__('3-rectangle').Rectangle\n\nmy_rectangle = Rectangle(2, 4)\nprint(\"Area: {} - Perimeter: {}\".format(my_rectangle.area(), my_rectangle.perimeter()))\n\nprint(str(my_rectangle))\nprint(repr(my_rectangle))\n\nprint(\"--\")\n\nmy_rectangle.width = 10\nmy_rectangle.height = 3\nprint(my_rectangle)\nprint(repr(my_rectangle))\n\nguillaume@ubuntu:~/0x08$ ./3-main.py\nArea: 8 - Perimeter: 12\n##\n##\n##\n##\n&lt;3-rectangle.Rectangle object at 0x7f92a75a2eb8&gt;\n--\n##########\n##########\n##########\n&lt;3-rectangle.Rectangle object at 0x7f92a75a2eb8&gt;\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   Object address can be different\n  </strong>\n </p>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "3-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 2,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(str(my</em>rectangle))</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1213_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(repr(my</em>rectangle))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1213_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(my</em>rectangle)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1213_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(0, 4)\nprint(str(my</em>rectangle))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1213_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 0)\nprint(str(my</em>rectangle))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1213_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:<br>\nmy<em>rectangle = Rectangle(0, 0)\nprint(str(my</em>rectangle))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 15,
+                        "files": [
+                            {
+                                "name": "main_5.py",
+                                "url": "projects/250/files/1213_main_5.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1214",
+                "title": "4. Eval is magic",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   3-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character\n   <code>\n    #\n   </code>\n   : (see example below)\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    repr()\n   </code>\n   should return a string representation of the rectangle to be able to recreate a new instance by using\n   <code>\n    eval()\n   </code>\n   (see example below)\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 4-main.py\n#!/usr/bin/python3\nRectangle = __import__('4-rectangle').Rectangle\n\nmy_rectangle = Rectangle(2, 4)\nprint(str(my_rectangle))\nprint(\"--\")\nprint(my_rectangle)\nprint(\"--\")\nprint(repr(my_rectangle))\nprint(\"--\")\nprint(hex(id(my_rectangle)))\nprint(\"--\")\n\n# create new instance based on representation\nnew_rectangle = eval(repr(my_rectangle))\nprint(str(new_rectangle))\nprint(\"--\")\nprint(new_rectangle)\nprint(\"--\")\nprint(repr(new_rectangle))\nprint(\"--\")\nprint(hex(id(new_rectangle)))\nprint(\"--\")\n\nprint(new_rectangle is my_rectangle)\nprint(type(new_rectangle) is type(my_rectangle))\n\nguillaume@ubuntu:~/0x08$ ./4-main.py\n##\n##\n##\n##\n--\n##\n##\n##\n##\n--\nRectangle(2, 4)\n--\n0x7f09ebf7cc88\n--\n##\n##\n##\n##\n--\n##\n##\n##\n##\n--\nRectangle(2, 4)\n--\n0x7f09ebf7ccc0\n--\nFalse\nTrue\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "4-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 2,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(str(my</em>rectangle))\nprint(repr(my_rectangle))</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1214_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nprint(my</em>rectangle)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1214_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nmy</em>rectangle<em>rep = repr(my</em>rectangle)</p>\n\n<p>new<em>rectangle = eval(my</em>rectangle<em>rep)\nprint(new</em>rectangle)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1214_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nmy</em>rectangle<em>rep = repr(my</em>rectangle)</p>\n\n<p>new<em>rectangle = eval(my</em>rectangle<em>rep)\nprint(repr(new</em>rectangle))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1214_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\nmy</em>rectangle<em>rep = repr(my</em>rectangle)</p>\n\n<p>new<em>rectangle = eval(my</em>rectangle<em>rep)\nprint(my</em>rectangle != new_rectangle)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1214_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1215",
+                "title": "5. Detect instance deletion",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   4-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character\n   <code>\n    #\n   </code>\n   :\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    repr()\n   </code>\n   should return a string representation of the rectangle to be able to recreate a new instance by using\n   <code>\n    eval()\n   </code>\n  </li>\n  <li>\n   Print the message\n   <code>\n    Bye rectangle...\n   </code>\n   (\n   <code>\n    ...\n   </code>\n   being 3 dots not ellipsis) when an instance of\n   <code>\n    Rectangle\n   </code>\n   is deleted\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 5-main.py\n#!/usr/bin/python3\nRectangle = __import__('5-rectangle').Rectangle\n\nmy_rectangle = Rectangle(2, 4)\nprint(\"Area: {} - Perimeter: {}\".format(my_rectangle.area(), my_rectangle.perimeter()))\n\ndel my_rectangle\n\ntry:\n    print(my_rectangle)\nexcept Exception as e:\n    print(\"[{}] {}\".format(e.__class__.__name__, e))\n\nguillaume@ubuntu:~/0x08$ ./5-main.py\nArea: 8 - Perimeter: 12\nBye rectangle...\n[NameError] name 'my_rectangle' is not defined\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "5-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\ndel my</em>rectangle</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1215_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle = Rectangle(2, 4)\ndel my</em>rectangle</p>\n\n<p>try:\n    my<em>rectangle.width = 12\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1215_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nfor i in range(0, 10):\n    m1 = Rectangle(2, 4)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1215_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1216",
+                "title": "6. How many instances",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   5-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    number_of_instances\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      0\n     </code>\n    </li>\n    <li>\n     Incremented during each new instance instantiation\n    </li>\n    <li>\n     Decremented during each instance deletion\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character\n   <code>\n    #\n   </code>\n   :\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    repr()\n   </code>\n   should return a string representation of the rectangle to be able to recreate a new instance by using\n   <code>\n    eval()\n   </code>\n  </li>\n  <li>\n   Print the message\n   <code>\n    Bye rectangle...\n   </code>\n   (\n   <code>\n    ...\n   </code>\n   being 3 dots not ellipsis) when an instance of\n   <code>\n    Rectangle\n   </code>\n   is deleted\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 6-main.py\n#!/usr/bin/python3\nRectangle = __import__('6-rectangle').Rectangle\n\nmy_rectangle_1 = Rectangle(2, 4)\nmy_rectangle_2 = Rectangle(2, 4)\nprint(\"{:d} instances of Rectangle\".format(Rectangle.number_of_instances))\ndel my_rectangle_1\nprint(\"{:d} instances of Rectangle\".format(Rectangle.number_of_instances))\ndel my_rectangle_2\nprint(\"{:d} instances of Rectangle\".format(Rectangle.number_of_instances))\n\nguillaume@ubuntu:~/0x08$ ./6-main.py\n2 instances of Rectangle\nBye rectangle...\n1 instances of Rectangle\nBye rectangle...\n0 instances of Rectangle\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "6-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 2,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nprint(Rectangle.number<em>of</em>instances)</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 6,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1216_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nprint(Rectangle.number<em>of</em>instances)\nr<em>1 = Rectangle(12, 4)\nprint(Rectangle.number</em>of<em>instances)\ndel r</em>1</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 7,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1216_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nprint(Rectangle.number<em>of</em>instances)\nr<em>1 = Rectangle(12, 4)\nprint(Rectangle.number</em>of<em>instances)\ndel r</em>1\nprint(Rectangle.number<em>of</em>instances)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 8,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1216_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nprint(Rectangle.number<em>of</em>instances)\nr<em>1 = Rectangle(12, 4)\nprint(Rectangle.number</em>of_instances)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 9,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1216_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nfor i in range(0, 10):\n    print(Rectangle.number<em>of</em>instances)\n    m<em>1 = Rectangle(12, 4)\n    print(Rectangle.number</em>of<em>instances)\n    del m</em>1\n    print(Rectangle.number<em>of</em>instances)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1216_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:<br>\nfor i in range(0, 10):\n    print(Rectangle.number<em>of</em>instances)\n    m<em>1 = Rectangle(12, 4)\n    print(Rectangle.number</em>of_instances)</p>\n\n<p>print(Rectangle.number<em>of</em>instances)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_5.py",
+                                "url": "projects/250/files/1216_main_5.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:<br>\nprint(Rectangle.number<em>of</em>instances)\nlist<em>rect = []\nfor i in range(0, 10):\n    print(Rectangle.number</em>of<em>instances)\n    list</em>rect.append(Rectangle(12, 4))\n    print(Rectangle.number<em>of</em>instances)</p>\n\n<p>print(Rectangle.number<em>of</em>instances)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_6.py",
+                                "url": "projects/250/files/1216_main_6.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 13,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1217",
+                "title": "7. Change representation",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   6-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    number_of_instances\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      0\n     </code>\n    </li>\n    <li>\n     Incremented during each new instance instantiation\n    </li>\n    <li>\n     Decremented during each instance deletion\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    print_symbol\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      #\n     </code>\n    </li>\n    <li>\n     Used as symbol for string representation\n    </li>\n    <li>\n     Can be any type\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character(s) stored in\n   <code>\n    print_symbol\n   </code>\n   :\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    repr()\n   </code>\n   should return a string representation of the rectangle to be able to recreate a new instance by using\n   <code>\n    eval()\n   </code>\n  </li>\n  <li>\n   Print the message\n   <code>\n    Bye rectangle...\n   </code>\n   (\n   <code>\n    ...\n   </code>\n   being 3 dots not ellipsis) when an instance of\n   <code>\n    Rectangle\n   </code>\n   is deleted\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 7-main.py\n#!/usr/bin/python3\nRectangle = __import__('7-rectangle').Rectangle\n\nmy_rectangle_1 = Rectangle(8, 4)\nprint(my_rectangle_1)\nprint(\"--\")\nmy_rectangle_1.print_symbol = \"&amp;\"\nprint(my_rectangle_1)\nprint(\"--\")\n\nmy_rectangle_2 = Rectangle(2, 1)\nprint(my_rectangle_2)\nprint(\"--\")\nRectangle.print_symbol = \"C\"\nprint(my_rectangle_2)\nprint(\"--\")\n\nmy_rectangle_3 = Rectangle(7, 3)\nprint(my_rectangle_3)\n\nprint(\"--\")\n\nmy_rectangle_3.print_symbol = [\"C\", \"is\", \"fun!\"]\nprint(my_rectangle_3)\n\nprint(\"--\")\n\nguillaume@ubuntu:~/0x08$ ./7-main.py\n########\n########\n########\n########\n--\n&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\n&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\n&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\n&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\n--\n##\n--\nCC\n--\nCCCCCCC\nCCCCCCC\nCCCCCCC\n--\n['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']\n['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']\n['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']['C', 'is', 'fun!']\n--\nBye rectangle...\nBye rectangle...\nBye rectangle...\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "7-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nprint(my<em>rectangle</em>1)</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1217_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nRectangle.print<em>symbol = &ldquo;C&rdquo;\nmy</em>rectangle<em>1 = Rectangle(8, 4)\nprint(my</em>rectangle_1)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1217_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nRectangle.print<em>symbol = &ldquo;C&rdquo;\nmy</em>rectangle<em>1 = Rectangle(8, 4)\nprint(my</em>rectangle_1)</p>\n\n<p>my<em>rectangle</em>2 = Rectangle(2, 1)\nprint(my<em>rectangle</em>2)</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1217_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nRectangle.print<em>symbol = &ldquo;C&rdquo;\nmy</em>rectangle<em>1 = Rectangle(8, 4)\nprint(my</em>rectangle_1)</p>\n\n<p>Rectangle.print<em>symbol = &ldquo;H&rdquo;\nmy</em>rectangle<em>2 = Rectangle(2, 1)\nprint(my</em>rectangle_2)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1217_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nprint(my<em>rectangle</em>1)\nmy<em>rectangle</em>1.print<em>symbol = &ldquo;H&rdquo;\nprint(my</em>rectangle_1)</p>\n\n<p>my<em>rectangle</em>2 = Rectangle(2, 1)\nprint(my<em>rectangle</em>2)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1217_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:<br>\nmy<em>rectangle</em>1 = Rectangle(8, 4)\nprint(my<em>rectangle</em>1)\nmy<em>rectangle</em>1.print<em>symbol = &ldquo;H&rdquo;\nprint(my</em>rectangle_1)</p>\n\n<p>Rectangle.print<em>symbol = &ldquo;K&rdquo;\nmy</em>rectangle<em>2 = Rectangle(2, 1)\nprint(my</em>rectangle_2)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 15,
+                        "files": [
+                            {
+                                "name": "main_5.py",
+                                "url": "projects/250/files/1217_main_5.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>1.print<em>symbol = 89\nprint(my</em>rectangle_1)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 16,
+                        "files": [
+                            {
+                                "name": "main_6.py",
+                                "url": "projects/250/files/1217_main_6.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>1.print<em>symbol = [&ldquo;Holberton&rdquo;, &ldquo;School&rdquo;]\nprint(my</em>rectangle_1)</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 17,
+                        "files": [
+                            {
+                                "name": "main_7.py",
+                                "url": "projects/250/files/1217_main_7.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1218",
+                "title": "8. Compare rectangles",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   7-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    number_of_instances\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      0\n     </code>\n    </li>\n    <li>\n     Incremented during each new instance instantiation\n    </li>\n    <li>\n     Decremented during each instance deletion\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    print_symbol\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      #\n     </code>\n    </li>\n    <li>\n     Used as symbol for string representation\n    </li>\n    <li>\n     Can be any type\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character\n   <code>\n    #\n   </code>\n   :\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    repr()\n   </code>\n   should return a string representation of the rectangle to be able to recreate a new instance by using\n   <code>\n    eval()\n   </code>\n  </li>\n  <li>\n   Print the message\n   <code>\n    Bye rectangle...\n   </code>\n   (\n   <code>\n    ...\n   </code>\n   being 3 dots not ellipsis) when an instance of\n   <code>\n    Rectangle\n   </code>\n   is deleted\n  </li>\n  <li>\n   Static method\n   <code>\n    def bigger_or_equal(rect_1, rect_2):\n   </code>\n   that returns the biggest rectangle based on the area\n   <ul>\n    <li>\n     <code>\n      rect_1\n     </code>\n     must be an instance of\n     <code>\n      Rectangle\n     </code>\n     , otherwise raise a\n     <code>\n      TypeError\n     </code>\n     exception with the message\n     <code>\n      rect_1 must be an instance of Rectangle\n     </code>\n     <br/>\n    </li>\n    <li>\n     <code>\n      rect_2\n     </code>\n     must be an instance of\n     <code>\n      Rectangle\n     </code>\n     , otherwise raise a\n     <code>\n      TypeError\n     </code>\n     exception with the message\n     <code>\n      rect_2 must be an instance of Rectangle\n     </code>\n     <br/>\n    </li>\n    <li>\n     Returns\n     <code>\n      rect_1\n     </code>\n     if both have the same area value\n    </li>\n   </ul>\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 8-main.py\n#!/usr/bin/python3\nRectangle = __import__('8-rectangle').Rectangle\n\nmy_rectangle_1 = Rectangle(8, 4)\nmy_rectangle_2 = Rectangle(2, 3)\n\nif my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):\n    print(\"my_rectangle_1 is bigger or equal to my_rectangle_2\")\nelse:\n    print(\"my_rectangle_2 is bigger than my_rectangle_1\")\n\n\nmy_rectangle_2.width = 10\nmy_rectangle_2.height = 5\nif my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):\n    print(\"my_rectangle_1 is bigger or equal to my_rectangle_2\")\nelse:\n    print(\"my_rectangle_2 is bigger than my_rectangle_1\")\n\nguillaume@ubuntu:~/0x08$ ./8-main.py\nmy_rectangle_1 is bigger or equal to my_rectangle_2\nmy_rectangle_2 is bigger than my_rectangle_1\nBye rectangle...\nBye rectangle...\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "8-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>2 = Rectangle(2, 3)</p>\n\n<p>print(my<em>rectangle</em>1 == Rectangle.bigger<em>or</em>equal(my<em>rectangle</em>1, my<em>rectangle</em>2))</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1218_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>2 = Rectangle(2, 3)</p>\n\n<p>print(my<em>rectangle</em>2 == Rectangle.bigger<em>or</em>equal(my<em>rectangle</em>1, my<em>rectangle</em>2))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1218_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>2 = Rectangle(4, 8)</p>\n\n<p>print(my<em>rectangle</em>1 == Rectangle.bigger<em>or</em>equal(my<em>rectangle</em>1, my<em>rectangle</em>2))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1218_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>2 = Rectangle(4, 8)</p>\n\n<p>print(my<em>rectangle</em>2 == Rectangle.bigger<em>or</em>equal(my<em>rectangle</em>1, my<em>rectangle</em>2))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1218_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>2 = Rectangle(1, 8)</p>\n\n<p>try:\n    print(my<em>rectangle</em>2 == Rectangle.bigger<em>or</em>equal(my<em>rectangle</em>1, &ldquo;Rect&rdquo;))\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.<strong>class</strong>.<strong>name</strong>, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "main_4.py",
+                                "url": "projects/250/files/1218_main_4.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:<br>\nmy<em>rectangle</em>1 = Rectangle(8, 4)\nmy<em>rectangle</em>2 = Rectangle(1, 8)</p>\n\n<p>try:\n    print(my<em>rectangle</em>2 == Rectangle.bigger<em>or</em>equal(&ldquo;Rect&rdquo;, my<em>rectangle</em>1))\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.<strong>class</strong>.<strong>name</strong>, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 15,
+                        "files": [
+                            {
+                                "name": "main_5.py",
+                                "url": "projects/250/files/1218_main_5.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1219",
+                "title": "9. A square is a rectangle",
+                "level": "mandatory",
+                "body_html": "<div>\n <p>\n  Write a class\n  <code>\n   Rectangle\n  </code>\n  that defines a rectangle by: (based on\n  <code>\n   8-rectangle.py\n  </code>\n  )\n </p>\n <ul>\n  <li>\n   Private instance attribute:\n   <code>\n    width\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def width(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def width(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        width\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        width must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        width\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        width must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Private instance attribute:\n   <code>\n    height\n   </code>\n   :\n   <ul>\n    <li>\n     property\n     <code>\n      def height(self):\n     </code>\n     to retrieve it\n    </li>\n    <li>\n     property setter\n     <code>\n      def height(self, value):\n     </code>\n     to set it:\n     <ul>\n      <li>\n       <code>\n        height\n       </code>\n       must be an integer, otherwise raise a\n       <code>\n        TypeError\n       </code>\n       exception with the message\n       <code>\n        height must be an integer\n       </code>\n       <br/>\n      </li>\n      <li>\n       if\n       <code>\n        height\n       </code>\n       is less than\n       <code>\n        0\n       </code>\n       , raise a\n       <code>\n        ValueError\n       </code>\n       exception with the message\n       <code>\n        height must be &gt;= 0\n       </code>\n      </li>\n     </ul>\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    number_of_instances\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      0\n     </code>\n    </li>\n    <li>\n     Incremented during each new instance instantiation\n    </li>\n    <li>\n     Decremented during each instance deletion\n    </li>\n   </ul>\n  </li>\n  <li>\n   Public class attribute\n   <code>\n    print_symbol\n   </code>\n   :\n   <ul>\n    <li>\n     Initialized to\n     <code>\n      #\n     </code>\n    </li>\n    <li>\n     Used as symbol for string representation\n    </li>\n    <li>\n     Can be any type\n    </li>\n   </ul>\n  </li>\n  <li>\n   Instantiation with optional\n   <code>\n    width\n   </code>\n   and\n   <code>\n    height\n   </code>\n   :\n   <code>\n    def __init__(self, width=0, height=0):\n   </code>\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def area(self):\n   </code>\n   that returns the rectangle area\n  </li>\n  <li>\n   Public instance method:\n   <code>\n    def perimeter(self):\n   </code>\n   that returns the rectangle perimeter:\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to\n     <code>\n      0\n     </code>\n     , perimeter has to be equal to\n     <code>\n      0\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    print()\n   </code>\n   and\n   <code>\n    str()\n   </code>\n   should print the rectangle with the character\n   <code>\n    #\n   </code>\n   :\n   <ul>\n    <li>\n     if\n     <code>\n      width\n     </code>\n     or\n     <code>\n      height\n     </code>\n     is equal to 0, return an empty string\n    </li>\n   </ul>\n  </li>\n  <li>\n   <code>\n    repr()\n   </code>\n   should return a string representation of the rectangle to be able to recreate a new instance by using\n   <code>\n    eval()\n   </code>\n  </li>\n  <li>\n   Print the message\n   <code>\n    Bye rectangle...\n   </code>\n   (\n   <code>\n    ...\n   </code>\n   being 3 dots not ellipsis) when an instance of\n   <code>\n    Rectangle\n   </code>\n   is deleted\n  </li>\n  <li>\n   Static method\n   <code>\n    def bigger_or_equal(rect_1, rect_2):\n   </code>\n   that returns the biggest rectangle based on the area\n   <ul>\n    <li>\n     <code>\n      rect_1\n     </code>\n     must be an instance of\n     <code>\n      Rectangle\n     </code>\n     , otherwise raise a\n     <code>\n      TypeError\n     </code>\n     exception with the message\n     <code>\n      rect_1 must be an instance of Rectangle\n     </code>\n     <br/>\n    </li>\n    <li>\n     <code>\n      rect_2\n     </code>\n     must be an instance of\n     <code>\n      Rectangle\n     </code>\n     , otherwise raise a\n     <code>\n      TypeError\n     </code>\n     exception with the message\n     <code>\n      rect_2 must be an instance of Rectangle\n     </code>\n     <br/>\n    </li>\n    <li>\n     Returns\n     <code>\n      rect_1\n     </code>\n     if both have the same area value\n    </li>\n   </ul>\n  </li>\n  <li>\n   Class method\n   <code>\n    def square(cls, size=0):\n   </code>\n   that returns a new Rectangle instance with\n   <code>\n    width == height == size\n   </code>\n  </li>\n  <li>\n   You are not allowed to import any module\n  </li>\n </ul>\n <pre><code>guillaume@ubuntu:~/0x08$ cat 9-main.py\n#!/usr/bin/python3\nRectangle = __import__('9-rectangle').Rectangle\n\nmy_square = Rectangle.square(5)\nprint(\"Area: {} - Perimeter: {}\".format(my_square.area(), my_square.perimeter()))\nprint(my_square)\n\nguillaume@ubuntu:~/0x08$ ./9-main.py\nArea: 25 - Perimeter: 20\n#####\n#####\n#####\n#####\n#####\nBye rectangle...\nguillaume@ubuntu:~/0x08$ \n</code></pre>\n <p>\n  <strong>\n   No test cases needed\n  </strong>\n </p>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "9-rectangle.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>You are not allowed to import any module</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 4,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Module is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 5,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Class is documented</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 6,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>square = Rectangle.square(10)\nprint(&ldquo;{} / {}&rdquo;.format(my</em>square.width, my_square.height))</p>\n",
+                        "points": 3.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": [
+                            {
+                                "name": "main_0.py",
+                                "url": "projects/250/files/1219_main_0.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \nmy<em>square = Rectangle.square(2)\nprint(&ldquo;{} / {}&rdquo;.format(my</em>square.width, my_square.height))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": [
+                            {
+                                "name": "main_1.py",
+                                "url": "projects/250/files/1219_main_1.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \ntry:\n    my<em>square = Rectangle.square(-2)\n    print(&ldquo;{} / {}&rdquo;.format(my</em>square.width, my<em>square.height))\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": [
+                            {
+                                "name": "main_2.py",
+                                "url": "projects/250/files/1219_main_2.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: \ntry:\n    my<em>square = Rectangle.square(&ldquo;12&rdquo;)\n    print(&ldquo;{} / {}&rdquo;.format(my</em>square.width, my<em>square.height))\nexcept Exception as e:\n    print(&ldquo;[{}] {}&rdquo;.format(e.</em><em>class</em><em>.</em><em>name</em>_, e))</p>\n",
+                        "points": 1.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "main_3.py",
+                                "url": "projects/250/files/1219_main_3.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            },
+            {
+                "task_id": "1209",
+                "title": "10. N queens",
+                "level": "advanced",
+                "body_html": "<div>\n <p>\n  <img/>\n  <br/>\n  <small>\n   Chess grandmaster\n   <a>\n    Judit Polg\u00e1r\n   </a>\n   , the strongest female chess player of all time\n  </small>\n  <br/>\n  <br>\n  </br>\n </p>\n <p>\n  The N queens puzzle is the challenge of placing N non-attacking queens on an N\u00d7N chessboard.\nWrite a program that solves the N queens problem.\n </p>\n <ul>\n  <li>\n   Usage:\n   <code>\n    nqueens N\n   </code>\n   <ul>\n    <li>\n     If the user called the program with the wrong number of arguments, print\n     <code>\n      Usage: nqueens N\n     </code>\n     , followed by a new line, and exit with the status\n     <code>\n      1\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   where N must be an integer greater or equal to\n   <code>\n    4\n   </code>\n   <ul>\n    <li>\n     If N is not an integer, print\n     <code>\n      N must be a number\n     </code>\n     , followed by a new line, and exit with the status\n     <code>\n      1\n     </code>\n    </li>\n    <li>\n     If N is smaller than\n     <code>\n      4\n     </code>\n     , print\n     <code>\n      N must be at least 4\n     </code>\n     , followed by a new line, and exit with the status\n     <code>\n      1\n     </code>\n    </li>\n   </ul>\n  </li>\n  <li>\n   The program should print every possible solution to the problem\n   <ul>\n    <li>\n     One solution per line\n    </li>\n    <li>\n     Format: see example\n    </li>\n    <li>\n     You don\u2019t have to print the solutions in a specific order\n    </li>\n   </ul>\n  </li>\n  <li>\n   You are only allowed to import the\n   <code>\n    sys\n   </code>\n   module\n  </li>\n </ul>\n <p>\n  Read:\n  <a>\n   Queen\n  </a>\n  ,\n  <a>\n   Backtracking\n  </a>\n </p>\n <pre><code>julien@ubuntu:~/0x08. N Queens$ ./101-nqueens.py 4\n[[0, 1], [1, 3], [2, 0], [3, 2]]\n[[0, 2], [1, 0], [2, 3], [3, 1]]\njulien@ubuntu:~/0x08. N Queens$ ./101-nqueens.py 6\n[[0, 1], [1, 3], [2, 5], [3, 0], [4, 2], [5, 4]]\n[[0, 2], [1, 5], [2, 1], [3, 4], [4, 0], [5, 3]]\n[[0, 3], [1, 0], [2, 4], [3, 1], [4, 5], [5, 2]]\n[[0, 4], [1, 2], [2, 0], [3, 5], [4, 3], [5, 1]]\njulien@ubuntu:~/0x08. N Queens$ \n</code></pre>\n</div>",
+                "file_info": {
+                    "repo": "alx-higher_level_programming",
+                    "directory": "0x08-python-more_classes",
+                    "file": "101-nqueens.py"
+                },
+                "checks": [
+                    {
+                        "title": "<p>File is present</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 1,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>First line contains #!/usr/bin/python3</p>\n",
+                        "points": 0.0,
+                        "check_label": "Requirement",
+                        "position": 3,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: No argument</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 10,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: One not integer argument</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 11,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: Argument &lt; 4</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 12,
+                        "files": null
+                    },
+                    {
+                        "title": "<p>Correct output - case: n = 4</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 13,
+                        "files": [
+                            {
+                                "name": "101-checker_nqueens.py",
+                                "url": "projects/250/files/1209_101-checker_nqueens.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: n = 5</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 14,
+                        "files": [
+                            {
+                                "name": "101-checker_nqueens.py",
+                                "url": "projects/250/files/1209_101-checker_nqueens.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case:  n = 8</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 15,
+                        "files": [
+                            {
+                                "name": "101-checker_nqueens.py",
+                                "url": "projects/250/files/1209_101-checker_nqueens.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Correct output - case: n = 10</p>\n",
+                        "points": 2.0,
+                        "check_label": "Code",
+                        "position": 16,
+                        "files": [
+                            {
+                                "name": "101-checker_nqueens.py",
+                                "url": "projects/250/files/1209_101-checker_nqueens.py"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "<p>Pycodestyle validation</p>\n",
+                        "points": 1.0,
+                        "check_label": "Requirement",
+                        "position": 20,
+                        "files": null
+                    }
+                ]
+            }
+        ]
     }
 }

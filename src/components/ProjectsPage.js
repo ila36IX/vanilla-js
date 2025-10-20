@@ -21,7 +21,13 @@ export default class ProjectsPage extends HTMLElement {
     container.innerHTML = '';
     if (projectIds) {
       projectIds.forEach(function createProjectLink(_id) {
-        const options = { attr: {'href': '/projects/show/' +  _id} }
+        const options = { 
+          attr: {
+            'href': '/projects/show/' +  _id,
+            'class': 'p-1'
+          },
+
+        }
         container.appendChild(DOMBuilder('a', _id, options));
       });
     }

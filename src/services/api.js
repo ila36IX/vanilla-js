@@ -28,6 +28,16 @@ const api = {
   async getProjectById(_id) {
     if (!app.data.projects || !_id) return null;
     return Object.values(app.data.projects).find((project) => project.id == _id);
+  },
+
+  async getProjectQuiz(_id) {
+    if (!app.data.projects || !_id) return null;
+    const project = Object.values(app.data.projects).find((project) => project.id == _id);
+    if (project) {
+      return project.quiz;
+    } else {
+      return null;
+    }
   }
 }
 

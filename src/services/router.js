@@ -1,4 +1,5 @@
 import DOMBuilder from './domBuilder.js';
+import api from '../services/api.js';
 
 // router function will take as parameter the path the user tries to go to
 // each key is regex for a path, and the value is the factory that will
@@ -8,7 +9,34 @@ const routes = {
   '/users': () => DOMBuilder('users-page'),
   '/projects': () => DOMBuilder('projects-page'),
   '/concepts': () => DOMBuilder('h1', 'Concepts Page'),
+  '/projects/show/([0-9]+)': showProject,
+  '*': () => DOMBuilder('h1', 'Not Found'),
 };
+
+await void showProject(path)
+{
+  const rg = new RegExp('/projects/show/([0-9]+)');
+  const match = rg.exec(path);
+
+  return (DOMBuilder('h1', path));
+  if (match) {
+    const currentProjectId = match[1];
+    const quizes = api.getProjectQuiz(currentProjectId);
+    app.data.quizes = {
+      currentQuiz: 0,
+      all: quizes,
+      exist: true
+    }
+  }
+  else {
+    app.data.quizes = {
+      currentQuiz: 0,
+      all: null,
+      exist: false
+    }
+  }
+  return DOMBuilder('project-page');
+}
 
 const Router = {
   init() {
@@ -35,29 +63,25 @@ const Router = {
   },
 
   renderPage(path) {
-    // Get the function that will generate the page markup
-    let pageFactory = routes[path];
-    if (!pageFactory)
-    {
-      const rg = new RegExp('/projects/show/([0-9]+)');
+    var pageContent = null;
+    for ([pathPattern, callBack] of Object.entries(routes)) {
+      const rg = new RegExp(pathPattern);
       const match = rg.exec(path);
       if (match) {
-        pageFactory = () => DOMBuilder('project-page', '', { attr: { "data-id": match[1] } });
+        pageContent = callBack(match);
       }
-      else
-        pageFactory = () => DOMBuilder('h1', '404: Page Not Found: '+path);
     }
-    const root = document.querySelector('#root');
 
+    const root = document.querySelector('#root');
     root.innerHTML = '';
-    root.appendChild(pageFactory(path));
+    root.appendChild(pageContent);
     window.scrollX = 0;
     window.scrollY = 0;
   },
 
   _onLinkClicked(event) {
     const link = event.target.closest('a');
-    if (!link) return;
+    if (!link || link.getAttribute('target') == '_blank') return;
     event.preventDefault();
     const href = link.getAttribute('href');
     Router.go(href);
