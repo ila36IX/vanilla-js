@@ -9,11 +9,13 @@
 export default function DOMBuilder(tag, text="", options={})
 {
   const el = document.createElement(tag);  
+  if (!el)
+    console.error("DOMBuilder cannot create tag:", tag);
 
   if (typeof text == 'string')
     el.textContent = text;
   else
-    console.error("DOMBuilder text must be string. Got: ", options.attr);
+    console.error("DOMBuilder text must be string. Got: ", text);
 
   if (options.attr) {
     for (const [key, value] of Object.entries(options.attr)) {
