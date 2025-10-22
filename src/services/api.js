@@ -31,7 +31,9 @@ const api = {
   },
 
   async getProjectQuiz(_id) {
-    if (!app.data.projects || !_id) return null;
+    if (!_id) return null;
+    if (!app.data.projects)
+      app.data.projects = await api.getProjects();
     const project = Object.values(app.data.projects).find((project) => project.id == _id);
     if (project) {
       return project.quiz;

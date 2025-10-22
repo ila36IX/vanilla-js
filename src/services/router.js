@@ -17,14 +17,16 @@ function showProject(match)
 {
   const currentProjectId = match[1];
   api.getProjectQuiz(currentProjectId).then((quizes) => {
-    app.data.quizes = {
-      currentQuiz: 0,
-      all: quizes,
+    if (quizes) {
+      app.data.projectQuiz = {
+        all: quizes,
+        currentQuizIndex: 0
+      };
     }
   });
   const wrapper = DOMBuilder('project-page');
-  wrapper.innerHTML = '';
   wrapper.appendChild(DOMBuilder('quiz-comp'));
+  return wrapper;
 }
 
 const Router = {
@@ -49,11 +51,11 @@ const Router = {
 
   renderPage(path) {
     const pageContent = this._getRouteMarkup(path);
-    if (! (pageContent instanceof Node))
-      console.error("Route:", path, "Function handler must return valid Node, Got:", pageContent);
+    if (!(pageContent instanceof Node))
+      console.error("Route:", path, "Function handler must return valid Node. Got:", pageContent);
     const root = document.querySelector('#root');
     root.innerHTML = '';
-    root.appendChild(pageContent);
+    root.appendChild(pageContent || DOMBuilder('br'));
     window.scrollX = 0;
     window.scrollY = 0;
   },
