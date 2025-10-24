@@ -16,31 +16,30 @@ export default class QuizComp extends HTMLElement {
   <div>
     <header class="d-flex flex-row justify-content-between mb-4">
       <div>
-        <button class="btn btn-primary" id='showAll'>Show All</button>
-      </div>
-      <div>
         <span id='progress' class='border border-info rounded-2 text-success bg-info bg-opacity-10 px-3 py-1'></span>
       </div>
     </header>
-    <form id='quiz'>
+    <form id='quiz' class="quiz">
     </form>
   </div>
-  <div class="d-flex justify-content-end gap-2 mt-5">
+  <div class="d-flex justify-content-between gap-2 mt-5">
+    <div>
+      <button type="button" id="prevQuiz" class="btn btn-secondary">Prev</button>
+      <button type="button" id="nextQuiz" class="btn btn-primary">Next</button>
+    </div>
     <button type="submit" id="formSubmit" form="quiz" class="btn btn-primary">Submit</button>
-    <!-- <button type="button" id="prevQuiz" class="btn btn-secondary">Prev</button> -->
-    <!-- <button type="button" id="nextQuiz" class="btn btn-primary">Next</button> -->
   </div>
 </div>
 `;
     this.$nextQuiz = this.querySelector('#nextQuiz');
     this.$prevQuiz = this.querySelector('#prevQuiz');
     this.$progress = this.querySelector('#progress');
-    this.$showAll  = this.querySelector('#showAll');
     this.$quizForm = this.querySelector('#quiz');
 
 
-    // this.$nextQuiz.addEventListener('click', () => this.nextQuiz());
-    // this.$prevQuiz.addEventListener('click', () => this.prevQuiz());
+    this.$nextQuiz.addEventListener('click', () => this.nextQuiz());
+    this.$prevQuiz.addEventListener('click', () => this.prevQuiz());
+
     this.render();
   }
 
@@ -59,21 +58,37 @@ export default class QuizComp extends HTMLElement {
 
   nextQuiz () {
     if (this.currentQuiz < this.manyQuizes - 1) {
+      let $toHide = this.querySelector(`#question-${this.currentQuiz}`);
+      let $toShow = this.querySelector(`#question-${this.currentQuiz + 1}`);
+      if ($toHide)
+        $toHide.classList.add('d-none');
+      if ($toShow)
+        $toShow.classList.remove('d-none');
       this.currentQuiz++;
-      // this.render();
+      this.updateProgress();
     }
   }
 
   prevQuiz () {
     if (this.currentQuiz > 0) {
+      let $toHide = this.querySelector(`#question-${this.currentQuiz}`);
+      let $toShow = this.querySelector(`#question-${this.currentQuiz - 1}`);
+      if ($toHide)
+        $toHide.classList.add('d-none');
+      if ($toShow)
+        $toShow.classList.remove('d-none');
       this.currentQuiz--;
-      // this.render();
     }
+    this.updateProgress();
+  }
+
+  updateProgress() {
+    this.$progress.textContent = `${this.currentQuiz + 1}/${this.manyQuizes}`;
   }
 
   render() {
     if (!this.quizes) return ;
-    this.$progress.textContent = `${this.currentQuiz + 1}/${this.manyQuizes}`;
+    this.updateProgress();
 
     this.quizes.forEach((question, questionIndex) => {
       const questionId = `question-${questionIndex}`;
@@ -86,12 +101,12 @@ export default class QuizComp extends HTMLElement {
 <label class="form-check-label w-100" for="${choiceId}">${choice.text}</label>
 </div>`;
       });
-      const $quizQuestion = `<div class='border-bottom border-primary mb-1 p-4'>
-<h2 class='text-primary'>Question #${questionIndex}</h2>
-<div>${question.question}</div>
-<div>${answers}</div>
-</div>`
-      this.$quizForm.insertAdjacentHTML('beforeend', $quizQuestion)
+      const $quizQuestion = `<div class='border-bottom border-primary mb-1 p-4 ${questionIndex === this.currentQuiz || 'd-none'}' id='${questionId}'>
+  <h2 class='text-primary'>Question #${questionIndex}</h2>
+  <div>${question.question}</div>
+  <div>${answers}</div>
+</div>`;
+      this.$quizForm.insertAdjacentHTML('beforeend', $quizQuestion);
     });
 
     this.$quizForm.addEventListener('submit', e => {
