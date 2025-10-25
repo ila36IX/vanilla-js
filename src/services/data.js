@@ -3,7 +3,7 @@ import api from "./api.js";
 const data = {
   users: null,
   menu: null,
-  projectQuiz: null,
+  quizQuestion: null,
   cart: []
 }
 
@@ -14,7 +14,7 @@ const proxiedData = new Proxy(data, {
     switch (property) {
       case 'users': window.dispatchEvent(new Event("appuserschange")); break;
       case 'projects': window.dispatchEvent(new Event("_ProjectsIndexChange")); break;
-      case 'projectQuiz': window.dispatchEvent(new Event("_ProjectQuizChanged")); break;
+      case 'quizQuestion': window.dispatchEvent(new Event("_ProjectQuizQuestionChanged")); break;
       default: break;
     }
     return (true);

@@ -3,10 +3,9 @@ import api from './services/api.js';
 import Route from './services/router.js';
 
 // not used, but it needs to be imported
-import UsersPage from './components/UsersPage.js'
 import ProjectsPage from './components/ProjectsPage.js';
 import ProjectPage from './components/ProjectPage.js';
-import QuizComp from './components/Quiz.js';
+import QuizQuestion from './components/Quiz.js';
 
 window.addEventListener('DOMContentLoaded', main);
 

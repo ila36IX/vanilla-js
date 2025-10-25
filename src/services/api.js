@@ -40,6 +40,25 @@ const api = {
     } else {
       return null;
     }
+  },
+
+  async answerQuestion(questionId, choicesIds) {
+    const data = {
+      1: ['10'],
+      2: ['21'],
+      3: ['33', '30']
+    }
+    await new Promise((resolve) => setTimeout(resolve, 400));
+    if (!data[questionId])
+      return {message: 'Unknown question'};
+    if (data[questionId].length != choicesIds.length)
+      return {message: 'Wrong number of choices'};
+    for (let choiceId of data[questionId]) {
+      if (!choicesIds.includes(choiceId)) {
+        return {message: 'Wrong choices'};
+      }
+    }
+    return {message: 'Good job', correctChoices: data[questionId]};
   }
 }
 

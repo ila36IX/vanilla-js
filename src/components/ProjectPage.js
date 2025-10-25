@@ -7,9 +7,9 @@ export default class ProjectPage extends HTMLElement {
   }
 
   connectedCallback() {
-    const template = document.getElementById("quiz-template");
-    const content = template.content.cloneNode(true);
-    this.appendChild(content);
+    // const template = document.getElementById("quiz-template");
+    // const content = template.content.cloneNode(true);
+    // this.appendChild(content);
     window.addEventListener('_ProjectsIndexChange', () => this.render());
     this.render();
   }
