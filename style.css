@@ -1,0 +1,426 @@
+:root {
+	/* ---------------------------------- */
+	/*               Colors               */
+	/* ---------------------------------- */
+	/* Violet */
+	--violet-100: #c2bbff;
+	--violet-200: #9990ea;
+	--violet-300: #6b63b5;
+	--violet-400: #645cab;
+	--violet-500: #5758ff;
+	--violet-600: #514a92;
+	--violet-700: #474083;
+	--violet-800: #323657;
+	--violet-900: #353643;
+	--violet-1000: #333349;
+	--violet-1100: #26253d;
+	--violet-1200: #231e4e;
+	--violet-1300: #1a1a2a;
+	--violet-1400: #161621;
+	--violet-1500: #00001b;
+
+	/* Gray */
+	--gray-100: #ffffff;
+	--gray-200: #fafafa;
+	--gray-300: #f9f6f0;
+	--gray-400: #f9f4f2;
+	--gray-500: #dfdbd9;
+	--gray-600: #d2d2d2;
+	--gray-700: #949494;
+	--gray-800: #8c8c8c;
+	--gray-900: #858585;
+	--gray-1000: #787878;
+	--gray-1100: #707070;
+	--gray-1200: #4a4a4a;
+	--gray-1300: #373737;
+	--gray-1400: #272d2e;
+	--gray-1500: #24261c;
+	--gray-1600: #212028;
+	--gray-1700: #1a1c23;
+	--gray-1800: #1e1b1d;
+	--gray-1900: #14161e;
+	--gray-2000: #18150e;
+	--gray-2100: #14111a;
+	--gray-2200: #13101a;
+	--gray-2300: #0f0f11;
+	--gray-2400: #120c0f;
+	--gray-2500: #120b0e;
+	--gray-2600: #110b0e;
+	--gray-2700: #0e0812;
+
+	/* Blue violet */
+	--blueViolet-100: #9fa1ad;
+	--blueViolet-200: #696b78;
+	--blueViolet-300: #2a2c39;
+	--blueViolet-400: #242633;
+	--blueViolet-500: #06227b;
+	--blueViolet-600: #1c1e28;
+	--blueViolet-700: #0b163b;
+	--blueViolet-800: #10141b;
+
+	/* Red */
+	--red-100: #fd7366;
+	--red-200: #ff5649;
+	--red-300: #de554b;
+	--red-400: #c34a41;
+	--red-500: #8f302d;
+	--red-600: #972f27;
+	--red-700: #6a2b2b;
+	--red-800: #b21515;
+	--red-900: #591e1c;
+	--red-1000: #4b1b1b;
+	--red-1100: #8d0000;
+	--red-1200: #640a0a;
+	--red-1300: #1b0a0a;
+
+	/* Blue */
+	--blue-100: #abc9ee;
+	--blue-200: #6da8ff;
+	--blue-300: #317adc;
+	--blue-400: #326ec4;
+	--blue-500: #265caa;
+	--blue-600: #3d5776;
+	--blue-700: #0052bb;
+	--blue-800: #355879;
+	--blue-900: #3f5468;
+	--blue-1000: #3b4a5b;
+	--blue-1100: #004e80;
+	--blue-1200: #194176;
+	--blue-1300: #183c70;
+	--blue-1400: #2e3a48;
+	--blue-1500: #1b3a62;
+	--blue-1600: #1e3551;
+	--blue-1700: #173151;
+	--blue-1800: #1f2e3f;
+	--blue-1900: #212a35;
+	--blue-2000: #0c1c2e;
+
+	/* Greenish cyan */
+	--green-100: #00b195;
+	--green-200: #259a87;
+	--green-300: #1d9b87;
+	--green-400: #086c5c;
+	--green-500: #005e4e;
+	--green-600: #17554b;
+	--green-700: #08463c;
+	--green-800: #07312a;
+	--green-900: #05201c;
+
+	/* Khaki */
+	--yellow-100: #f1ede6;
+	--yellow-200: #ded9cd;
+	--yellow-300: #fdc055;
+	--yellow-400: #ebab38;
+	--yellow-500: #ffd600;
+	--yellow-600: #f2b800;
+	--yellow-700: #cc850a;
+	--yellow-800: #9f762d;
+	--yellow-900: #302611;
+	--yellow-1000: #18150d;
+	--yellow-1100: #161108;
+
+	/* Orange */
+	--orange-100: #e1c7b0;
+	--orange-200: #f1ba8c;
+	--orange-300: #feb447;
+	--orange-400: #fcb542;
+	--orange-500: #b17220;
+	--orange-600: #685344;
+	--orange-700: #534c46;
+	--orange-800: #554936;
+	--orange-900: #4a433c;
+	--orange-1000: #41362a;
+	--orange-1100: #39322c;
+	--orange-1200: #412c1c;
+	--orange-1300: #2c2621;
+
+	/* Purple violet */
+	--purpleViolet-100: #aba8b5;
+	--purpleViolet-200: #7352b2;
+	--purpleViolet-300: #5b4882;
+	--purpleViolet-400: #5d4586;
+	--purpleViolet-500: #413688;
+	--purpleViolet-600: #3d3458;
+	--purpleViolet-700: #302940;
+	--purpleViolet-800: #2b2445;
+	--purpleViolet-900: #281d40;
+	--purpleViolet-1000: #15111d;
+	--purpleViolet-1100: #15111c;
+
+	/* Scarlet red */
+	--scarletRed-100: #ecc4cb;
+	--scarletRed-200: #ff525e;
+	--scarletRed-300: #513a40;
+	--scarletRed-400: #3b282d;
+	--scarletRed-500: #8c0007;
+	--scarletRed-600: #361b21;
+	--scarletRed-700: #2f1e22;
+
+	/* Cyan */
+	--cyan-100: #97bebd;
+	--cyan-200: #4f6b6a;
+	--cyan-300: #47605e;
+	--cyan-400: #095d67;
+	--cyan-500: #313e3d;
+	--cyan-600: #1c2828;
+
+	/* Purple */
+	--purple-100: #4e327a;
+	--purple-200: #443455;
+	--purple-300: #2a133f;
+	--purple-400: #24152f;
+	--purple-500: #180e1e;
+
+	/* Lime */
+	--lime-100: #bcc987;
+	--lime-200: #6d754d;
+	--lime-300: #606644;
+	--lime-400: #353a2a;
+	--lime-500: #1b1f14;
+
+	/* Purple magenta */
+	--purpleMagenta-100: #dab4e3;
+	--purpleMagenta-200: #6c4476;
+	--purpleMagenta-300: #4a3750;
+	--purpleMagenta-400: #352938;
+	--purpleMagenta-500: #2e1f32;
+
+	/* Magenta */
+	--magenta-100: #734179;
+	--magenta-200: #20011e;
+
+	/* Teal */
+	--teal-100: #0b281d;
+	--teal-200: #05120d;
+
+	/* Scarlet */
+	--scarlet-100: #835d71;
+	--scarlet-200: #7c526a;
+
+	/* Bluish cyan */
+	--bluishCyan-100: #d3e9f5;
+
+	/* Bluish green */
+	--bluishGreen-100: #005416;
+
+	/* Vermilion */
+	--vermilion-100: #2b221d;
+
+
+
+	/* -------------- Reset ------------- */
+	--background        	: #00001b;
+
+	/* -------------- Basic ------------- */
+	--black             	: #000;
+	--white         	: #fff;
+
+	/* -------------- Gray -------------- */
+	--grayDark          	: #7b7b7b;
+	--grayLight         	: #f2f2f4;
+
+	/* ---------------------------------- */
+	/*                Fonts               */
+	/* ---------------------------------- */
+	--fontWeightSemiBold	: 600;
+
+	/* ------------- Family ------------- */
+	--fontFamily        	: "Inter", sans-serif;
+
+	/* -------------- Font Sizes ------------- */
+	--fontSizeSmaller       : 0.75rem;
+	--fontSizeSmall         : 0.9rem; 
+	--fontSizeRoot          : 1rem;   
+	--fontSizeLarge         : 1.10rem;
+	--fontSizeLarger        : 1.25rem; 
+	--fontSizeXLarge        : 1.50rem;   
+	--fontSizeXXLarge       : 2rem;   
+	--fontSizeHuge          : 2.5rem;   
+
+	/* -------------- Spacing ------------- */
+	--space-1               : 0.25rem;  /* 4px  */
+	--space-2               : 0.5rem;   /* 8px  */
+	--space-3               : 1rem;     /* 16px */
+	--space-4               : 1.5rem;   /* 24px */
+	--space-5               : 2rem;     /* 32px */
+	--space-6               : 3rem;     /* 48px */
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: var(--fontSizeRoot);
+}
+
+body {
+  font-family: var(--fontFamily);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+body {
+	color: var(--white);
+	background: var(--background);
+	font-family: "Inter", sans-serif;
+}
+
+.mainNav {
+	padding: var(--space-4);
+	display: flex;
+	justify-content: center;
+}
+
+.mainNav__link {
+	color: var(--white);
+	padding: 0 0.25rem;
+	margin: 0 0.75rem;
+}
+
+.quiz {
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: var(--space-3);
+	margin-top: var(--space-2);
+	width: 80%;
+}
+
+.quiz__question {
+	margin-bottom: 3rem;
+	font-size: var(--fontSizeLarger);
+}
+
+
+.quiz__choices {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-5);
+}
+
+.quiz__choice {
+	padding: var(--space-5) var(--space-6);
+	border: 1.5px solid var(--white);
+	background: none;
+	width: 100%;
+	height: 100%;
+	font-size: var(--fontSizeLarge);
+	color: var(--white);
+	cursor: pointer;
+	transition: .1s ease-in border;
+}
+
+
+.quiz__choice:hover:not(.quiz__choice--disabled) {
+	border: 1.5px solid var(--yellow-700);
+}
+
+.quiz__choice--selected {
+	border: 1.5px solid var(--violet-200);
+}
+
+.quiz__choice--disabled  {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.quiz__choice--correct {
+	border: 1.5px solid var(--green-200);
+	color: var(--green-100);
+}
+
+.quiz__choice--uncorrect {
+	border: 1.5px solid var(--red-200);
+	color: var(--red-100);
+}
+
+.quizNav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--space-2);
+}
+
+.quizNav__btn {
+	width: var(--space-3);
+	height: var(--space-3);
+	border-radius: 50%;
+	position: relative;
+	cursor: pointer;
+	background: radial-gradient(circle at 40% 30%,var(--blue-600) 4%,57%, transparent 90%) var(--blueViolet-800);
+	border: 2px solid var(--white);
+}
+
+.quizNav__btn {
+	width: var(--space-3);
+	height: var(--space-3);
+	border-radius: 50%;
+	position: relative;
+	cursor: pointer;
+	background: radial-gradient(circle at 40% 30%,var(--blue-600) 4%,57%, transparent 90%) var(--blueViolet-800);
+	border: 2px solid var(--white);
+}
+
+.quizNav__btn--current {
+	position: relative;
+}
+
+.quizNav__btn--current:before {
+	content: "";
+	width: var(--space-1);
+	height: var(--space-1);
+	background: var(--white);
+	border-radius: 50%;
+	right: 50%;
+	position: absolute;
+	transform: translate(50%, -50%);
+}
+
+.quizNav__btn--answered {
+	border: 2px solid var(--white);
+	background: radial-gradient(circle at 40% 30%,var(--green-700) 4%,57%, transparent 90%) var(--green-100);
+	box-shadow: green 0px 0px 11px 4px;
+}

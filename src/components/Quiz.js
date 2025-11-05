@@ -9,7 +9,9 @@ export class QuizApp extends HTMLElement {
   }
 
   async connectedCallback() {
-    this.innerHTML = `<p>Loading Quiz...</p>`;
+    const template = document.getElementById("quiz-template");
+    const content = template.content.cloneNode(true);
+    this.appendChild(content);
 
     try {
       this.quizData = [
@@ -22,7 +24,7 @@ export class QuizApp extends HTMLElement {
             { id: 12, markup: '<p>5</p>' },
           ],
           manyCorrectAnswers: 1,
-          correctChoices: []
+          correctChoices: [10]
         },
         {
           questionId: 2,
@@ -36,6 +38,7 @@ export class QuizApp extends HTMLElement {
           correctChoices: []
         }
       ];
+      this.setUpButtons();
       this.renderCurrentQuestion();
 
     } catch (err) {
@@ -44,11 +47,42 @@ export class QuizApp extends HTMLElement {
     }
   }
 
+  setUpButtons() 
+  {
+    const $wrapper = this.querySelector(".quizNav");
+    $wrapper.innerHTML = '';
+    let i = 0;
+    for (const quiz of this.quizData) {
+      if (quiz.correctChoices.length) {
+        var $btn = `<button class="quizNav__btn quizNav__btn--answered" data-index="${i}"></button>`;
+      } else {
+        var $btn = `<button class="quizNav__btn" data-index="${i}"></button>`;
+      }
+      $wrapper.insertAdjacentHTML('beforeend', $btn);
+      i++;
+    }
+    const $btns = this.querySelectorAll(".quizNav__btn");
+    for (const $btn of $btns) {
+      $btn.addEventListener('click', (e) => {
+        this.currentQuestionIndex = Number(e.currentTarget.dataset.index);
+        this.renderCurrentQuestion();
+      });
+    }
+  }
+
   renderCurrentQuestion() {
-    this.innerHTML = '';
     const questionEl = document.createElement('quiz-question');
+    questionEl.addEventListener('choice-selected', this.correctChoiceSelected.bind(this));
     questionEl.quizData = this.quizData[this.currentQuestionIndex];
-    this.appendChild(questionEl);
+    const $container = this.querySelector('.quiz__container')
+    $container.innerHTML = '';
+    $container.appendChild(questionEl);
+  }
+
+  correctChoiceSelected(event) {
+    const question = this.quizData.find(quiz => quiz.questionId == event.detail.questionId);
+    question.correctChoices = event.detail.correctChoices;
+    console.log(this.quizData)
   }
 }
 
@@ -90,13 +124,16 @@ export default class QuizQuestion extends HTMLElement {
     this.$question.innerHTML = this.questionMarkup;
     this.$choices.innerHTML = '';
     this.choices.forEach(choice => {
-      const choicetemplate = `<li>
-  <button 
-    class='btn btn-outline-primary border border-primary w-100'
-    data-choice_id='${choice.id}'>
+      if (this.correctChoices.includes(choice.id)) {
+        var choicetemplate = `<button class="quiz__choice quiz__choice--correct" data-choice_id="${choice.id}">
 ${choice.markup}
-  </button>
-</li>`;
+</button>`;
+      }
+      else {
+        var choicetemplate = `<button class="quiz__choice" data-choice_id="${choice.id}">
+${choice.markup}
+</button>`;
+      }
       this.$choices.insertAdjacentHTML('beforeend', choicetemplate);
     });
     const buttons = this.$choices.querySelectorAll('button');
@@ -113,30 +150,36 @@ ${choice.markup}
     console.log(r);
     if (r.correctChoices) {
       for (let choice of r.correctChoices) {
-        this.querySelector(`[data-choice_id="${choice}"]`).classList.add('border-warning');
+        this.querySelector(`[data-choice_id="${choice}"]`).classList.add('quiz__choice--correct');
       }
+      this.correctChoices = r.correctChoices;
+      this.dispatchEvent(new CustomEvent("choice-selected", {
+        detail: {
+          questionId: this.questionId,
+          correctChoices: this.correctChoices,
+        },
+        bubbles: true
+      }));
     } 
     this.activateButtons();
   }
 
   disableButtons () {
-    const buttons = this.$choices.querySelectorAll('button');
+    const ctaChoices = this.$choices.querySelectorAll('.quiz__choice');
     this.buttonActive = false;
-    for (const button of buttons) {
-      button.classList.add('border-secondary');
-      button.style.cursor = 'not-allowed';
-      button.disabled = true;
+    for (const ctaChoice of ctaChoices) {
+      ctaChoice.classList.add('quiz__choice--disabled');
+      ctaChoice.disabled = true;
     }
   }
 
   activateButtons () {
-    const buttons = this.$choices.querySelectorAll('button');
+    const ctaChoices = this.$choices.querySelectorAll('.quiz__choice');
     this.buttonActive = true;
-    for (const button of buttons) {
-      button.classList.remove('border-secondary');
-      button.classList.remove('border-danger');
-      button.style.cursor = 'pointer';
-      button.disabled = false;
+    for (const ctaChoice of ctaChoices) {
+      ctaChoice.classList.remove('quiz__choice--disabled');
+      ctaChoice.classList.remove('quiz__choice--selected');
+      ctaChoice.disabled = false;
     }
     this.selectedChoices = [];
   }
@@ -145,7 +188,10 @@ ${choice.markup}
     const clickedChoiceId = event.currentTarget.dataset.choice_id;
     if (!this.selectedChoices.includes(clickedChoiceId)) {
       this.selectedChoices.push(clickedChoiceId);
-      this.querySelector(`[data-choice_id="${clickedChoiceId}"]`).classList.add('border-danger');
+      this.querySelector(`[data-choice_id="${clickedChoiceId}"]`).classList.add('quiz__choice--selected');
+    } else {
+      this.selectedChoices.splice(this.selectedChoices.indexOf(clickedChoiceId), 1); // remove element from array
+      this.querySelector(`[data-choice_id="${clickedChoiceId}"]`).classList.remove('quiz__choice--selected');
     }
     if (this.selectedChoices.length == this.manyCorrectAnswers)
       this.submitChoices();
