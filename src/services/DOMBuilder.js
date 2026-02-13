@@ -1,13 +1,14 @@
 /**
- *
+ * https://github.com/facebook/react/blob/a4195750779dbd9a13e1615fbbd493bf2c5768ca/packages/react/src/ReactElement.js#L362
  * text: string: text content of the tag
  * options {}: is an object with optional keys:
  *  - attrs: key:value of attrubutes eg. {'href': '/users'}
  *  - on: event:handler eg. {'click': () => alert("clicked")}
  *  - childern: array of Node types, the same type that this function returns
  */
-export default function DOMBuilder(tag, text="", options={})
+export function DOMBuilder(tag, text="", options={})
 {
+  console.log(tag);
   const el = document.createElement(tag);  
   if (!el)
     console.error("DOMBuilder cannot create tag:", tag);

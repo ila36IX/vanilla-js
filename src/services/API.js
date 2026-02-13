@@ -1,14 +1,5 @@
-const api = {
+const API = {
   url: "/220.json",
-
-  async getUser () {
-    // return await fetch(this.url);
-    await new Promise((resolve) => setTimeout(resolve, 200));
-    return [
-      { 'name': 'ali' },
-      { 'name': 'othername' }
-    ]
-  },
 
   async getProjects() {
     const data = await fetch(this.url);
@@ -30,19 +21,43 @@ const api = {
     return Object.values(app.data.projects).find((project) => project.id == _id);
   },
 
-  async getProjectQuiz(_id) {
+  async getQuizById(_id) {
     if (!_id) return null;
-    if (!app.data.projects)
-      app.data.projects = await api.getProjects();
-    const project = Object.values(app.data.projects).find((project) => project.id == _id);
-    if (project) {
-      return project.quiz;
-    } else {
-      return null;
+    return {
+      quizes: [
+        {
+          questionId: 1,
+          questionMarkup: '<p>What is 2 + 2?</p>',
+          choices: [
+            { id: 10, markup: '<p>3</p>' },
+            { id: 11, markup: '<p>4</p>' },
+            { id: 12, markup: '<p>5</p>' },
+          ],
+          manyCorrectAnswers: 1,
+          correctChoices: [10]
+        },
+        {
+          questionId: 2,
+          questionMarkup: '<p>Which are frontend frameworks?</p>',
+          choices: [
+            { id: 20, markup: '<p>React</p>' },
+            { id: 21, markup: '<p>Django</p>' },
+            { id: 22, markup: '<p>Vue</p>' },
+            { id: 23, markup: '<p>Hassan</p>' },
+          ],
+          manyCorrectAnswers: 2,
+          correctChoices: []
+        }
+      ]
     }
   },
 
-  async answerQuestion(questionId, choicesIds) {
+  async getName() {
+    await new Promise((resolve) => setTimeout(resolve, 400));
+    return "ALIEN";
+  },
+
+  async answerQuizQuestion(questionId, choicesIds) {
     const data = {
       1: ['10'],
       2: ['21'],
@@ -62,4 +77,4 @@ const api = {
   }
 }
 
-export default api;
+export default API;

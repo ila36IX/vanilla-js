@@ -1,25 +1,28 @@
-import data from './services/data.js';
-import api from './services/api.js';
-import Route from './services/router.js';
+import Store from './services/Store.js';
+import API from './services/API.js';
+import Route from './services/Router.js';
 
-// not used, but it needs to be imported
+// @Critical: the module needs to be imported in order for the code to run and
+// make the components available
 import ProjectsPage from './components/ProjectsPage.js';
 import ProjectPage from './components/ProjectPage.js';
 import QuizQuestion from './components/Quiz.js';
+import DesignSystem from './components/DesignSystem.js';
 
+// you can do it also like this: window.onDOMContentLoaded = main
 window.addEventListener('DOMContentLoaded', main);
 
 async function loadData() {
-  app.data.users = null;
-  app.data.project = {};
-  app.data.users = await api.getUser();
-  app.data.projects = await api.getProjects();
+  window.app = {};
+  app.Store = Store;
 }
 
+
 async function main() {
-  // set up the global data state and initialise it
-  window.app = {};
-  app.data = data;
+  // // set up the global data state and initialise it
   loadData();
   Route.init();
+  setInterval(() => {
+    Store.time = new Date();
+  }, 2000);
 }

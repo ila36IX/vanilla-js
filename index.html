@@ -17,15 +17,13 @@
     <nav class="mainNav">
       <div class="mainNav__wrapper">
         <a class="mainNav__link" href="/">Home</a>
-        <a class="mainNav__link" href="/">Home</a>
-        <a class="mainNav__link" href="/">Home</a>
-        <a class="mainNav__link" href="/">Home</a>
       </div>
     </nav>
     <div class="container text-light mt-4" >
     </div>
-      <main class="container text-light mt-4" id="root">
-      </main>
+      <p data-title>ali</p>
+      <main class="container text-light mt-4" id="root"> </main>
+      <main id="test"><quiz-question></quiz-question></main>
 
 
 
@@ -44,17 +42,42 @@
       <div class='quiz__container'></div>
     </template>
 
+    <template id="question-quistion-option">
+        <div id="choices" class="quiz__choice" data-text>
+        </div>
+    </template>
+
     <template id="question-template">
       <article class="quiz">
-        <div id="question" class="quiz__question">
-        </div>
+        <div id="question" class="quiz__question" data-questionText> </div>
         <div id="choices" class="quiz__choices">
-              <button type="button">
-                <p>Correct</p>
-              </button>
+          <div id="choices" class="quiz__choice">
+            <p>testing is verythig</p>
+          </div>
+            <div id="choices" class="quiz__choice">Option#1</div>
+            <div id="choices" class="quiz__choice">Option#2</div>
+            <div id="choices" class="quiz__choice">Option#3</div>
+            <div id="choices" class="quiz__choice">Option#4</div>
         </div>
       </article>
     </template>
+
+    <template id="template-time">
+      <span data-hour></span>
+      <span>&sol;</span>
+      <span data-minute></span>
+      <span>&sol;</span>
+      <span data-second></span>
+    </template>
+
+    <!-- <template id="template-test" data-option="123"> -->
+    <!--   <div> -->
+    <!--     <h2 data-title></h2> -->
+    <!--     <p data-desc><p/> -->
+    <!--     <i data-time><i/> -->
+    <!--   </div> -->
+    <!--   <button>button</button> -->
+    <!-- </template> -->
 
   </body>
 </html>

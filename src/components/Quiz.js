@@ -1,5 +1,5 @@
-import api from "../services/api.js";
-import DOMBuilder from '../services/domBuilder.js';
+import api from "../services/API.js";
+import {DOMBuilder} from '../services/DOMBuilder.js';
 
 export class QuizApp extends HTMLElement { 
   constructor () {
@@ -33,6 +33,7 @@ export class QuizApp extends HTMLElement {
             { id: 20, markup: '<p>React</p>' },
             { id: 21, markup: '<p>Django</p>' },
             { id: 22, markup: '<p>Vue</p>' },
+            { id: 23, markup: '<p>Hassan</p>' },
           ],
           manyCorrectAnswers: 2,
           correctChoices: []
@@ -190,7 +191,7 @@ ${choice.markup}
       this.selectedChoices.push(clickedChoiceId);
       this.querySelector(`[data-choice_id="${clickedChoiceId}"]`).classList.add('quiz__choice--selected');
     } else {
-      this.selectedChoices.splice(this.selectedChoices.indexOf(clickedChoiceId), 1); // remove element from array
+      this.selectedChoices.splice(this.selectedChoices.indexOf(clickedChoiceId), 1);
       this.querySelector(`[data-choice_id="${clickedChoiceId}"]`).classList.remove('quiz__choice--selected');
     }
     if (this.selectedChoices.length == this.manyCorrectAnswers)
@@ -198,6 +199,5 @@ ${choice.markup}
   }
 }
 
-
-customElements.define("quiz-question", QuizQuestion);
+// customElements.define("quiz-question", QuizQuestion);
 customElements.define("quiz-app", QuizApp);

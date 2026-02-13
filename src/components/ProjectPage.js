@@ -1,5 +1,5 @@
-import DOMBuilder from '../services/domBuilder.js';
-import api from '../services/api.js';
+import { DOMBuilder } from '../services/DOMBuilder.js';
+import API from '../services/API.js';
 
 export default class ProjectPage extends HTMLElement {
   constructor () {
