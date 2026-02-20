@@ -1,5 +1,5 @@
 import api from "../services/API.js";
-import {DOMBuilder} from '../services/DOMBuilder.js';
+import {createElement} from '../services/createElement.js';
 
 export class QuizApp extends HTMLElement { 
   constructor () {

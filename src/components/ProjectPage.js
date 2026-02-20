@@ -1,4 +1,4 @@
-import { DOMBuilder } from '../services/DOMBuilder.js';
+import { createElement } from '../services/createElement.js';
 import API from '../services/API.js';
 
 export default class ProjectPage extends HTMLElement {

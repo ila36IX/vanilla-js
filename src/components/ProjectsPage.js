@@ -1,4 +1,4 @@
-import { DOMBuilder } from '../services/DOMBuilder.js';
+import { createElement } from '../services/createElement.js';
 import api from '../services/API.js';
 
 export default class ProjectsPage extends HTMLElement {
@@ -28,7 +28,7 @@ export default class ProjectsPage extends HTMLElement {
           },
 
         }
-        container.appendChild(DOMBuilder('a', _id, options));
+        container.appendChild(createElement('a', _id, options));
       });
     }
   }

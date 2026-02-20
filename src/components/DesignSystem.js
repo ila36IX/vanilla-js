@@ -1,129 +1,114 @@
-import { DOMBuilder } from '../services/DOMBuilder.js';
+import { createElement } from '../services/createElement.js';
 import { BaseComponent } from '../components/Base.js';
+import { PascaleToKababCase } from '../services/caseConvertor.js';
 import Store from '../services/Store.js';
-import API from '../services/API.js';
 
-export default class DesignSystem extends BaseComponent {
-  static get templateId() {
-    return 'template-test';
-  }
+// class QuizOption extends BaseComponent {
+//   static get templateId() {
+//     return 'question-quistion-option';
+//   }
+//
+//   constructor() {
+//     super();
+//     this.fields = {
+//       text: this.dataset.text || "Void",
+//     }
+//     this.events = {
+//       // '_time': this.updateOption.bind(this),
+//     }
+//     this.assignListeners();
+//   }
+//
+//   updateOption(event) {
+//     const curr = event.detail.value;
+//     this.updateField('text', curr.getSeconds()+"");
+//   }
+//
+//   async onMount() {
+//     this.renderFields();
+//   }
+// }
+//
 
-  constructor() {
-    console.log("design system");
-    super();
-    // fields to render used by the template
-    this.fields = {
-      title: 'Loading...',
-      desc: 'selector3',
-      time: new Date().toString(),
-    }
-    this.events = {
-        '_time': this.updateTime.bind(this),
-    }
-    this.assignListeners();
-  }
-
-  updateTime(event) {
-    this.updateField('time', event.detail.value.toString())
-  }
-
-  async onMount() {
-    // suppose to udpate this.fields
-    this.renderFields();
-    this.$('button').addEventListener('click', () => {
-      const content = DOMBuilder('button', "testing");
-      this.updateField('title', content);
-    });
-    const name = await API.getName();
-    this.fields.title = name;
-    this.renderFields();
-  }
-}
-
-class TimeComp extends BaseComponent {
-  static get templateId() {
-    return 'template-time';
-  }
-  constructor() {
-    super();
-    this.fields = {
-      hour: '24',
-      minute: '60',
-      second: '01' 
-    }
-    this.events = {
-      '_time': this.updateTime.bind(this),
-    }
-    this.assignListeners();
-  }
-
-  updateTime(event) {
-    const curr = event.detail.value;
-    this.updateField('minute', curr.getMinutes()+"")
-    this.updateField('second', curr.getSeconds()+"")
-    this.updateField('hour', curr.getHours()+"")
-  }
-
-  async onMount() {
-    this.renderFields()
-  }
-}
-
-class QuizOption extends BaseComponent {
-  static get templateId() {
-    return 'question-quistion-option';
-  }
-
-  constructor() {
-    super();
-    this.fields = {
-      text: "How are you doing?",
-    }
-    this.events = {
-      // '_time': this.updateOption.bind(this),
-    }
-    this.assignListeners();
-  }
-
-  updateOption(event) {
-    const curr = event.detail.value;
-    this.updateField('text', curr.getSeconds()+"");
-  }
-
-  async onMount() {
-    this.renderFields();
-  }
+function getCurrentQuestionData(questionId) {
+  return Store.quiz.find((i) =>i=questionId);
 }
 
 class QuistionQuiz extends BaseComponent {
-  static get templateId() {
-    return 'question-template';
-  }
-
   constructor() {
     super();
-    this.fields = {
-      questionText: "How are you doing?",
-    }
-    this.events = {
-      // '_time': this.updateOption.bind(this),
-    }
-    this.assignListeners();
+    this.body = [ 
+      createElement('h2', "Fuck1"),
+      createElement('h2', "Fuck2"),
+      createElement('h2', "Fuck3"),
+      createElement('h2', "Fuck4"),
+    ]
   }
 
-  updateOption(event) {
-    const curr = event.detail.value;
-    this.updateField('text', curr.getSeconds()+"");
+  initFields() {
+    const meta = getCurrentQuestionData(this.dataset.id);
+    this.fields = {
+      text: meta.questionMarkup,
+    }
   }
 
   async onMount() {
-    this.renderFields();
+    this.initFields();
+    this.ready();
+  }
+}
+
+function selectQuizOption(optionId) {
+  if (quizOptionSelected(optionId)) {
+    Store.selectedQuizOptions.delete(optionId);
+  } else {
+    Store.selectedQuizOptions.add(optionId);
+  }
+  console.log(Store.selectedQuizOptions);
+}
+
+/**
+ * Chack if the option was already selected
+ *
+ * @param {optionId} the clicked option id
+ * @return true if already selected
+ */
+function quizOptionSelected(optionId) {
+  return Store.selectedQuizOptions.has(optionId);
+}
+
+export class QuestionOption extends BaseComponent {
+  handleClick() {
+    if (Store.waitingForSelectedOptionResult)
+      return ;
+    console.log(this.dataset)
+    selectQuizOption(this.dataset.id);
+  }
+
+  onMount() {
+    this.addEventListener('click', this.handleClick.bind(this));
+    if (this.dataset.selected) {
+      this.$('[data-text]').classList.add('quiz__choice--selected');
+    }
+    if (this.dataset.disabled) {
+      this.$('[data-text]').classList.add('quiz__choice--disabled');
+    }
+  }
+}
+
+export class DummyComp extends BaseComponent {
+  updateTime() {
+        this.renderAttribute('time', Store.time);
+  }
+
+  onMount() {
+    this.events = {
+      '_time' : () => this.updateTime(),
+    };
+    this.renderAttribute('time', Store.time);
   }
 }
 
 
-
-// customElements.define("design-system", null);
-customElements.define("time-comp", TimeComp);
-customElements.define("quiz-option", QuizOption);
-customElements.define("quiz-question", QuistionQuiz);
+customElements.define("dummy-comp", DummyComp);
+customElements.define("question-option", QuestionOption);

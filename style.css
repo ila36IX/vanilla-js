@@ -306,6 +306,12 @@ body {
 	font-family: "Inter", sans-serif;
 }
 
+.container {
+	width: 80%;
+	margin: auto;
+	margin-top: 2rem;
+}
+
 .mainNav {
 	padding: var(--space-4);
 	display: flex;

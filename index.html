@@ -20,54 +20,67 @@
       </div>
     </nav>
     <div class="container text-light mt-4" >
+      <dummy-comp>
+        <li>Hi</hi>
+        <li>Hello</li>
+      </dummy-comp>
+      <question-option  text="Hello"></question-option>
     </div>
-      <p data-title>ali</p>
-      <main class="container text-light mt-4" id="root"> </main>
-      <main id="test"><quiz-question></quiz-question></main>
+    <main class="container text-light mt-4" id="root">
+    </main>
 
 
-
-    <template id="quiz-template">
-      <nav class='quizNav'>
-        <button class="quizNav__btn"></button>
-        <button class="quizNav__btn"></button>
-        <button class="quizNav__btn"></button>
-        <button class="quizNav__btn"></button>
-        <button class="quizNav__btn"></button>
-        <button class="quizNav__btn"></button>
-        <button class="quizNav__btn quizNav__btn--answered"></button>
-        <button class="quizNav__btn quizNav__btn--current"></button>
-        <button class="quizNav__btn quizNav__btn--answered quizNav__btn--current"></button>
-      </nav>
-      <div class='quiz__container'></div>
+    <template id="template--dummy_comp">
+      <ul style="color: red">
+        <slot></slot>
+        <li>You did it</li>
+      </ul>
+      <p>Time: <span dummy_comp--time></span></p>
     </template>
 
-    <template id="question-quistion-option">
-        <div id="choices" class="quiz__choice" data-text>
-        </div>
-    </template>
 
-    <template id="question-template">
+    <!-- <template id="quiz-template"> -->
+    <!--   <nav class='quizNav'> -->
+    <!--     <button class="quizNav__btn"></button> -->
+    <!--     <button class="quizNav__btn"></button> -->
+    <!--     <button class="quizNav__btn"></button> -->
+    <!--     <button class="quizNav__btn"></button> -->
+    <!--     <button class="quizNav__btn"></button> -->
+    <!--     <button class="quizNav__btn"></button> -->
+    <!--     <button class="quizNav__btn quizNav__btn--answered"></button> -->
+    <!--     <button class="quizNav__btn quizNav__btn--current"></button> -->
+    <!--     <button class="quizNav__btn quizNav__btn--answered quizNav__btn--current"></button> -->
+    <!--   </nav> -->
+    <!--   <div class='quiz__container'></div> -->
+    <!-- </template> -->
+    <!---->
+    <!-- Template name: template-quiz-question -->
+    <!-- Template id: quiz-question -->
+    <template id="template--quiz_question" text=alien>
       <article class="quiz">
-        <div id="question" class="quiz__question" data-questionText> </div>
-        <div id="choices" class="quiz__choices">
-          <div id="choices" class="quiz__choice">
-            <p>testing is verythig</p>
-          </div>
-            <div id="choices" class="quiz__choice">Option#1</div>
-            <div id="choices" class="quiz__choice">Option#2</div>
-            <div id="choices" class="quiz__choice">Option#3</div>
-            <div id="choices" class="quiz__choice">Option#4</div>
+        <div id="question" class="quiz__question" quiz-question-text> </div>
+        <div id="choices" class="quiz__choices"> 
+          <slot></slot>
         </div>
+        <p style='background: red' quiz-question-desc></p>
       </article>
     </template>
 
-    <template id="template-time">
-      <span data-hour></span>
-      <span>&sol;</span>
-      <span data-minute></span>
-      <span>&sol;</span>
-      <span data-second></span>
+    <template id="template--question_option">
+      <p id="choices" class="quiz__choice" question_option--text>
+      </p>
+    </template>
+
+    <template id="template--question_option">
+      <p id="choices" class="quiz__choice" question_option--text>
+      </p>
+    </template>
+
+    <template id="template-counter-comp">
+      <span data-nbr></span>
+      <span data-name="fuck"></span>
+      <button data-incr>+</button>
+      <button data-decr>-</button>
     </template>
 
     <!-- <template id="template-test" data-option="123"> -->
