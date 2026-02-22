@@ -19,21 +19,21 @@
         <a class="mainNav__link" href="/">Home</a>
       </div>
     </nav>
+
     <div class="container text-light mt-4" >
-      <dummy-comp>
-        <li>Hi</hi>
-        <li>Hello</li>
-      </dummy-comp>
-      <question-option  text="Hello"></question-option>
+      <question-quiz>
+        <question-option text="Hello world" data-id=1></question-option>
+        <question-option text="Nice stuff" data-id=3></question-option>
+      </question-quiz>
     </div>
+
+    <!-- targeted by the Router -->
     <main class="container text-light mt-4" id="root">
     </main>
 
 
     <template id="template--dummy_comp">
-      <ul style="color: red">
-        <slot></slot>
-        <li>You did it</li>
+      <ul style="color: red" dummy_comp--slot>
       </ul>
       <p>Time: <span dummy_comp--time></span></p>
     </template>
@@ -54,43 +54,24 @@
     <!--   <div class='quiz__container'></div> -->
     <!-- </template> -->
     <!---->
-    <!-- Template name: template-quiz-question -->
-    <!-- Template id: quiz-question -->
-    <template id="template--quiz_question" text=alien>
+
+    <template id="template--question_quiz" text=alien>
       <article class="quiz">
-        <div id="question" class="quiz__question" quiz-question-text> </div>
-        <div id="choices" class="quiz__choices"> 
-          <slot></slot>
-        </div>
-        <p style='background: red' quiz-question-desc></p>
+        <div class="quiz__question" question_quiz-text></div>
+        <div class="quiz__choices" question_quiz--slot></div>
       </article>
     </template>
 
     <template id="template--question_option">
-      <p id="choices" class="quiz__choice" question_option--text>
+      <p class="quiz__choice" question_option--text>
       </p>
     </template>
 
-    <template id="template--question_option">
-      <p id="choices" class="quiz__choice" question_option--text>
+    <template id="template--my_number">
+      <p class="quiz__choice" my_number--text>
+      hello <span my_number--text></span>!
       </p>
     </template>
-
-    <template id="template-counter-comp">
-      <span data-nbr></span>
-      <span data-name="fuck"></span>
-      <button data-incr>+</button>
-      <button data-decr>-</button>
-    </template>
-
-    <!-- <template id="template-test" data-option="123"> -->
-    <!--   <div> -->
-    <!--     <h2 data-title></h2> -->
-    <!--     <p data-desc><p/> -->
-    <!--     <i data-time><i/> -->
-    <!--   </div> -->
-    <!--   <button>button</button> -->
-    <!-- </template> -->
 
   </body>
 </html>

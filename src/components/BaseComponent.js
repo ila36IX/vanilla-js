@@ -36,7 +36,7 @@ export class BaseComponent extends HTMLElement {
   loadTemplate() {
     const template = /** @type {HTMLTemplateElement} */ (document.getElementById(this.templateId));
     /**
-     * the body needs to be saved bacause rendering the temiplate will destory 
+     * the body needs to be saved bacause rendering the temiplate will destory
      * the compoenent children
      */
     this.body = Array.from(this.childNodes);
@@ -76,7 +76,7 @@ export class BaseComponent extends HTMLElement {
     const nodeSelector = `[${prefix}--${name}]`;
     const node = this.querySelector(nodeSelector);
     if (!node)
-      this.logWarn(`Missing the attribute (${prefix}--${name}) in its template`)
+      this.logWarn(`Missing the attribute (${prefix}--${name}) in its template`);
     return node;
   }
 
@@ -93,11 +93,8 @@ export class BaseComponent extends HTMLElement {
     this.getAttributeDOM(name)?.replaceChildren(value);
   }
 
-  /**
-   * @param {any[]} msgs
-   */
   logWarn(...msgs) {
-    console.warn(`[${this.constructor.name}]`, ...msgs)
+    console.warn(`[${this.constructor.name}]`, ...msgs);
   }
 
   renderChildren() {
@@ -133,3 +130,4 @@ export class BaseComponent extends HTMLElement {
     console.log(this.templateId, "Cleaning up...");
   }
 }
+

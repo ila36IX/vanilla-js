@@ -1,92 +1,41 @@
 import { createElement } from '../services/createElement.js';
-import { BaseComponent } from '../components/Base.js';
+import { BaseComponent } from './BaseComponent.js';
 import { PascaleToKababCase } from '../services/caseConvertor.js';
 import Store from '../services/Store.js';
 
-// class QuizOption extends BaseComponent {
-//   static get templateId() {
-//     return 'question-quistion-option';
-//   }
-//
-//   constructor() {
-//     super();
-//     this.fields = {
-//       text: this.dataset.text || "Void",
-//     }
-//     this.events = {
-//       // '_time': this.updateOption.bind(this),
-//     }
-//     this.assignListeners();
-//   }
-//
-//   updateOption(event) {
-//     const curr = event.detail.value;
-//     this.updateField('text', curr.getSeconds()+"");
-//   }
-//
-//   async onMount() {
-//     this.renderFields();
-//   }
-// }
-//
-
 function getCurrentQuestionData(questionId) {
-  return Store.quiz.find((i) =>i=questionId);
+  return Store.quiz.find((i) => i = questionId);
 }
 
-class QuistionQuiz extends BaseComponent {
-  constructor() {
-    super();
-    this.body = [ 
-      createElement('h2', "Fuck1"),
-      createElement('h2', "Fuck2"),
-      createElement('h2', "Fuck3"),
-      createElement('h2', "Fuck4"),
-    ]
-  }
 
-  initFields() {
-    const meta = getCurrentQuestionData(this.dataset.id);
-    this.fields = {
-      text: meta.questionMarkup,
-    }
-  }
 
-  async onMount() {
-    this.initFields();
-    this.ready();
-  }
+/**
+ * @type CustomElementConstructor
+ */
+class QuestionQuiz extends BaseComponent {
 }
 
 function selectQuizOption(optionId) {
-  if (quizOptionSelected(optionId)) {
+  if (Store.selectedQuizOptions.has(optionId)) {
     Store.selectedQuizOptions.delete(optionId);
   } else {
     Store.selectedQuizOptions.add(optionId);
   }
-  console.log(Store.selectedQuizOptions);
-}
-
-/**
- * Chack if the option was already selected
- *
- * @param {optionId} the clicked option id
- * @return true if already selected
- */
-function quizOptionSelected(optionId) {
-  return Store.selectedQuizOptions.has(optionId);
+  // console.log(Store.selectedQuizOptions);
 }
 
 export class QuestionOption extends BaseComponent {
+  constructor() {
+    super();
+  }
+
   handleClick() {
-    if (Store.waitingForSelectedOptionResult)
-      return ;
-    console.log(this.dataset)
     selectQuizOption(this.dataset.id);
+    console.log(this.handleClick.bind(this) == this.handleClick.bind(this));
   }
 
   onMount() {
-    this.addEventListener('click', this.handleClick.bind(this));
+    this.addEventListener('click', this.handleClick);
     if (this.dataset.selected) {
       this.$('[data-text]').classList.add('quiz__choice--selected');
     }
@@ -96,19 +45,22 @@ export class QuestionOption extends BaseComponent {
   }
 }
 
+/**
+ * @type CustomElementConstructor
+ */
 export class DummyComp extends BaseComponent {
   updateTime() {
-        this.renderAttribute('time', Store.time);
+    this.renderAttribute('time', Store.time.toLocaleTimeString());
   }
 
   onMount() {
     this.events = {
-      '_time' : () => this.updateTime(),
+      '_time': () => this.updateTime(),
     };
-    this.renderAttribute('time', Store.time);
+    this.renderAttribute('time', Store.time.toLocaleTimeString());
   }
 }
 
-
 customElements.define("dummy-comp", DummyComp);
 customElements.define("question-option", QuestionOption);
+customElements.define("question-quiz", QuestionQuiz);

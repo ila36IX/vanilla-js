@@ -1,4 +1,7 @@
-import API from "./API.js";
+import API from "./API";
+
+
+// import API from "./API.js";
 
 const data = [
   {
@@ -38,9 +41,9 @@ const Store = new Proxy(initState, {
   set(target, property, value) {
     target[property] = value;
 
-    const eventName = `_${property}`;
-    const event = new CustomEvent(eventName, { 
-      detail: { value: value, property: property } 
+    const eventName = `_${String(property)}`;
+    const event = new CustomEvent(eventName, {
+      detail: { value: value, property: property }
     });
     // console.log(`INFO: The event '${eventName}' has been fired!`);
     window.dispatchEvent(event);

@@ -19,5 +19,5 @@ async function main() {
   Route.init();
   setInterval(() => {
     Store.time = new Date();
-  }, 2000);
+  }, 1000);
 }
